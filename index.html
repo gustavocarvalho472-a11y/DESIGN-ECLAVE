@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Eclave · Sérum Clareador Noturno</title>
+<meta name="description" content="Sérum Clareador Noturno Eclave com retinaldeído, centella e copper peptide. Clareia manchas e uniformiza o tom enquanto você dorme.">
+<meta name="theme-color" content="#7A5359">
+<link rel="icon" type="image/png" href="assets/eclave-simbolo.png">
+<link rel="apple-touch-icon" href="assets/eclave-simbolo.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Eclave">
+<meta property="og:title" content="Eclave · Sérum Clareador Noturno">
+<meta property="og:description" content="Sérum Clareador Noturno Eclave com retinaldeído, centella e copper peptide. Clareia manchas e uniformiza o tom enquanto você dorme.">
+<meta property="og:url" content="https://gustavocarvalho472-a11y.github.io/DESIGN-ECLAVE/">
+<meta property="og:image" content="https://gustavocarvalho472-a11y.github.io/DESIGN-ECLAVE/assets/img/hero-sorriso.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:"Serotiva";src:url("assets/Serotiva-VF.ttf") format("truetype");font-weight:100 900;font-display:swap}
+:root{--cream:#F6E3CB;--cream-2:#FBF1E4;--paper:#FFFAF4;--mauve:#7A5359;--mauve-d:#5C3D43;--rose:#A5707D;--blush:#F3C9CC;--blush-2:#FBE4E3;--gold:#E4C9A2;--gold-d:#C9A676;--ink:#3E2A2E;--muted:#6E5358;--r:22px}
+*{box-sizing:border-box;margin:0;padding:0}
+img.slot{display:block;width:100%;height:100%;aspect-ratio:3/2;object-fit:cover;-webkit-user-drag:none;user-select:none}
+html{scroll-behavior:smooth;overflow-x:clip}body{overflow-x:clip}
+body{font-family:"Figtree",system-ui,sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;line-height:1.5}
+a{color:var(--mauve);text-decoration:none}a:hover{color:var(--rose)}
+h1,h2,h3,.serif{font-family:"Serotiva",Georgia,serif;font-weight:500;letter-spacing:-.01em;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--mauve);color:#fff;font-weight:700;font-size:17px;padding:18px 32px;border-radius:999px;border:0;cursor:pointer;transition:transform .15s,background .15s;box-shadow:0 8px 0 var(--mauve-d)}
+.btn:hover{background:var(--rose);color:#fff;transform:translateY(2px);box-shadow:0 6px 0 var(--mauve-d)}
+.btn:active{transform:translateY(6px);box-shadow:0 2px 0 var(--mauve-d)}
+.btn.full{width:100%}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--rose)}
+.sec{padding:96px 0}
+.sec-h{text-align:center;max-width:720px;margin:0 auto 56px;display:flex;flex-direction:column;gap:14px;align-items:center}
+.sec-h h2{font-size:clamp(34px,4.6vw,56px);line-height:1.05;color:var(--mauve)}
+.sec-h p{font-size:18px;color:var(--muted)}
+.stars{color:#E0A93B;letter-spacing:2px}
+
+/* topbar */
+.topbar{background:var(--mauve);color:#fff;font-size:14px;font-weight:600;overflow:hidden;white-space:nowrap}
+.topbar .track{display:inline-flex;gap:48px;padding:10px 0;animation:mq 28s linear infinite}
+.topbar span{display:inline-flex;gap:10px;align-items:center}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* header */
+header{position:sticky;top:0;z-index:30;padding:14px 0;background:color-mix(in oklab,var(--paper) 86%,transparent);backdrop-filter:blur(10px)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;background:var(--rose);border-radius:999px;padding:12px 14px 12px 28px}
+.nav img{height:22px;filter:brightness(0) invert(1)}
+.nav ul{display:flex;gap:28px;list-style:none}
+.nav ul a{color:#fff;font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:.06em}
+.nav ul a:hover{color:var(--cream)}
+.nav .cart{background:var(--cream);color:var(--mauve);font-weight:700;padding:10px 20px;border-radius:999px;font-size:14px;display:flex;gap:8px;align-items:center}
+.nav .cart b{background:var(--mauve);color:#fff;border-radius:999px;min-width:22px;height:22px;display:grid;place-items:center;font-size:12px}
+
+/* banner */
+.banner{position:relative;background:var(--cream)}.banner .bg{position:relative;height:min(82vh,760px);min-height:520px}.banner .copy-b{position:absolute;inset:0;pointer-events:none;display:flex;align-items:center;justify-content:flex-end}.banner .copy-b .wrap{width:100%;display:flex;justify-content:flex-end}.banner .box-b{max-width:min(440px,30vw);display:flex;flex-direction:column;gap:24px;align-items:flex-end;text-align:right;pointer-events:auto}.banner h1{font-family:"Figtree",sans-serif;font-weight:500;font-size:clamp(34px,3.6vw,60px);line-height:1.05;color:var(--rose);letter-spacing:-.02em}.banner h1 b{font-weight:800;color:var(--mauve)}
+@media (max-width:1180px){.banner .bg{height:auto;min-height:0;aspect-ratio:16/9}.banner .copy-b{position:static;padding:32px 0 48px}.banner .copy-b .wrap{justify-content:flex-start}.banner .box-b{max-width:560px;align-items:flex-start;text-align:left}.banner h1{font-size:clamp(36px,6vw,56px)}}
+/* product hero */
+.hero{background:var(--cream);padding:40px 0 88px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:680px;height:680px;border-radius:50%;background:var(--blush);right:-240px;top:-260px;opacity:.7}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:56px;align-items:start;position:relative}
+.gallery{display:grid;grid-template-columns:84px minmax(0,1fr);gap:14px;position:sticky;top:110px}
+.thumbs{display:flex;flex-direction:column;gap:12px}
+.thumb{aspect-ratio:1;border-radius:16px;overflow:hidden;border:2px solid transparent;cursor:pointer;background:var(--cream-2);transition:border-color .15s}
+.thumb.on{border-color:var(--mauve)}
+.main-img{position:relative;aspect-ratio:1/1.08;border-radius:28px;overflow:hidden;background:var(--cream-2)}
+.main-img .pane{position:absolute;inset:0;opacity:0;pointer-events:none;transition:opacity .25s}
+.main-img .pane.on{opacity:1;pointer-events:auto}
+.sticker{position:absolute;z-index:3;top:18px;left:18px;width:108px;height:108px;border-radius:50%;background:var(--gold);color:var(--mauve-d);display:grid;place-items:center;text-align:center;font-weight:800;line-height:1.05;font-size:14px;transform:rotate(-12deg);box-shadow:0 6px 0 var(--gold-d);pointer-events:none}
+.sticker big{display:block;font-family:"Serotiva",serif;font-size:32px;font-weight:600}
+.info{display:flex;flex-direction:column;gap:22px}
+.rating{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:var(--muted)}
+.info h1{font-size:clamp(38px,4.4vw,58px);line-height:1.02;color:var(--mauve)}
+.info h1 em{font-style:italic;color:var(--rose)}
+.lede{font-size:18px;color:var(--muted)}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{background:#fff;border-radius:999px;padding:8px 14px;font-size:14px;font-weight:600;color:var(--mauve);display:flex;gap:8px;align-items:center}
+.pill i{width:8px;height:8px;border-radius:50%;background:var(--rose)}
+.timer{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--mauve);color:#fff;border-radius:18px;padding:14px 20px;font-weight:600}
+.timer .t{display:flex;gap:6px}
+.timer .t span{background:var(--cream);color:var(--mauve);border-radius:10px;min-width:48px;padding:6px 0;text-align:center;font-weight:800;font-size:20px;font-variant-numeric:tabular-nums}
+.bundles{display:flex;flex-direction:column;gap:12px}
+.bundle{position:relative;display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:16px;align-items:center;background:#fff;border:2px solid #fff;border-radius:20px;padding:18px 20px;cursor:pointer;transition:border-color .15s,transform .15s}
+.bundle:hover{transform:translateY(-2px)}
+.bundle.on{border-color:var(--mauve);background:var(--cream-2)}
+.bundle .dot{width:24px;height:24px;border-radius:50%;border:2px solid var(--rose);display:grid;place-items:center}
+.bundle.on .dot:after{content:"";width:12px;height:12px;border-radius:50%;background:var(--mauve)}
+.bundle h4{font-size:17px;font-weight:700;color:var(--ink)}
+.bundle small{font-size:14px;color:var(--muted)}
+.bundle .pr{text-align:right}
+.bundle .pr b{display:block;font-size:20px;color:var(--mauve)}
+.bundle .pr s{font-size:14px;color:var(--muted)}
+.bundle .tag{position:absolute;top:-11px;right:20px;background:var(--rose);color:#fff;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:4px 12px;border-radius:999px}
+.bundle .tag.g{background:var(--gold);color:var(--mauve-d)}
+.trust{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.trust div{background:rgba(255,255,255,.6);border-radius:14px;padding:12px;text-align:center;font-size:13px;font-weight:600;color:var(--mauve)}
+.trust svg{display:block;margin:0 auto 6px}
+.pay{font-size:14px;color:var(--muted);text-align:center}
+
+/* marquee */
+.band{background:var(--rose);color:#fff;overflow:hidden;white-space:nowrap;transform:rotate(-1.5deg);margin:-24px -20px 0;position:relative;z-index:2}
+.band .track{display:inline-flex;gap:40px;padding:18px 0;animation:mq 30s linear infinite;font-family:"Serotiva",serif;font-size:28px}
+.band .track span{display:inline-flex;gap:40px;align-items:center}
+.band img{height:22px;filter:brightness(0) invert(1)}
+
+/* problem */
+.problem-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.pcard{background:var(--blush-2);border-radius:var(--r);padding:28px 24px;display:flex;flex-direction:column;gap:10px}
+.pcard:nth-child(2){background:var(--cream)}.pcard:nth-child(3){background:var(--cream-2)}.pcard:nth-child(4){background:#F4DCD6}
+.pcard .n{font-family:"Serotiva",serif;font-size:44px;color:var(--rose);line-height:1}
+.pcard h3{font-size:24px;color:var(--mauve)}
+.pcard p{color:var(--muted);font-size:15px}
+
+/* split lifestyle */
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center}
+.split .ph{aspect-ratio:4/5;border-radius:200px 200px 28px 28px;overflow:hidden}
+.split .txt{display:flex;flex-direction:column;gap:22px}
+.split h2{font-size:clamp(34px,4.4vw,54px);line-height:1.05;color:var(--mauve)}
+.checks{list-style:none;display:flex;flex-direction:column;gap:14px}
+.checks li{display:grid;grid-template-columns:32px minmax(0,1fr);gap:14px;align-items:start;font-size:17px}
+.checks li i{width:32px;height:32px;border-radius:50%;background:var(--blush);display:grid;place-items:center;color:var(--mauve);font-style:normal;font-weight:800}
+.checks b{color:var(--mauve)}
+
+/* ingredients */
+.ingr{background:var(--mauve);color:#fff}
+.ingr .sec-h h2{color:var(--cream)}.ingr .sec-h p{color:var(--gold)}.ingr .eyebrow{color:var(--gold)}
+.ing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.ing{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.ing .im{aspect-ratio:1;background:rgba(255,255,255,.06)}
+.ing .bd{padding:22px;display:flex;flex-direction:column;gap:8px}
+.ing h3{font-size:26px;color:var(--cream)}
+.ing .role{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.ing p{font-size:15px;color:#F3E6E0}
+
+/* results */
+.results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-bottom:56px}
+.res{background:var(--cream);border-radius:var(--r);padding:32px;display:flex;flex-direction:column;gap:6px}
+.res b{font-family:"Serotiva",serif;font-size:64px;line-height:1;color:var(--mauve);font-weight:500}
+.res p{color:var(--muted)}
+.ba{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.bacard{background:#fff;border-radius:28px;padding:14px;box-shadow:0 1px 0 rgba(0,0,0,.04),0 20px 50px -30px rgba(122,83,89,.5)}
+.bapair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.bapair>div{position:relative;aspect-ratio:4/5;border-radius:18px;overflow:hidden}
+.bapair label{position:absolute;z-index:2;bottom:12px;left:12px;background:#fff;color:var(--mauve);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;padding:5px 12px;border-radius:999px;pointer-events:none}
+.bapair>div:last-child label{background:var(--mauve);color:#fff}
+.bacard p{padding:14px 8px 6px;font-size:15px;color:var(--muted)}
+.bacard p b{color:var(--mauve)}
+
+/* how to */
+.how{background:var(--blush-2)}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;counter-reset:s}
+.step{background:#fff;border-radius:var(--r);padding:28px;display:flex;flex-direction:column;gap:14px}
+.step .im{aspect-ratio:4/3;border-radius:16px;overflow:hidden}
+.step .k{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--gold);color:var(--mauve-d);font-weight:800;font-size:18px}
+.step h3{font-size:26px;color:var(--mauve)}
+.step p{color:var(--muted)}
+.note{margin-top:28px;text-align:center;font-weight:600;color:var(--mauve)}
+
+/* compare */
+.cmp{max-width:860px;margin:0 auto;background:#fff;border-radius:28px;overflow:hidden;box-shadow:0 30px 60px -40px rgba(122,83,89,.6)}
+.cmp table{width:100%;border-collapse:collapse}
+.cmp th,.cmp td{padding:18px 20px;text-align:center;font-size:16px}
+.cmp th:first-child,.cmp td:first-child{text-align:left}
+.cmp thead th{font-weight:700;color:var(--muted)}
+.cmp thead th.us{background:var(--mauve);color:#fff}
+.cmp thead th.us img{height:16px;filter:brightness(0) invert(1);display:block;margin:0 auto}
+.cmp tbody tr+tr td{border-top:1px solid #F1E4DA}
+.cmp td.us{background:var(--cream-2);color:var(--mauve);font-weight:800;font-size:20px}
+.cmp td.no{color:#C4AFAF;font-size:20px}
+
+/* reviews */
+.rv-top{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:-28px;margin-bottom:40px;font-weight:600;color:var(--muted)}
+.rv-top b{font-family:"Serotiva",serif;font-size:44px;color:var(--mauve);font-weight:500}
+.reviews{columns:3 300px;column-gap:16px}
+.rv{break-inside:avoid;margin-bottom:16px;background:var(--cream-2);border-radius:var(--r);padding:24px;display:flex;flex-direction:column;gap:12px}
+.rv:nth-child(3n+2){background:var(--blush-2)}
+.rv .ph{aspect-ratio:1;border-radius:14px;overflow:hidden}
+.rv h4{font-size:17px}
+.rv p{color:var(--muted);font-size:15px}
+.rv .who{display:flex;justify-content:space-between;align-items:center;font-size:14px;font-weight:600;color:var(--mauve)}
+.rv .who span{font-size:12px;color:#5E8D6A;font-weight:700}
+
+/* guarantee */
+.guar{background:var(--cream)}
+.guar .box{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:40px;align-items:center;background:#fff;border-radius:32px;padding:40px 48px}
+.seal{width:150px;height:150px;border-radius:50%;background:var(--gold);display:grid;place-items:center;text-align:center;color:var(--mauve-d);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;box-shadow:inset 0 0 0 8px var(--gold),inset 0 0 0 10px #fff}
+.seal big{display:block;font-family:"Serotiva",serif;font-size:52px;letter-spacing:0;line-height:1;font-weight:600}
+.guar h2{font-size:clamp(28px,3.4vw,40px);color:var(--mauve);margin-bottom:8px}
+.guar p{color:var(--muted);font-size:17px}
+
+/* faq */
+.faq{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.faq details{background:var(--cream-2);border-radius:20px;padding:0 24px}
+.faq details[open]{background:var(--blush-2)}
+.faq summary{list-style:none;cursor:pointer;padding:22px 0;font-weight:700;font-size:17px;display:flex;justify-content:space-between;gap:16px;align-items:center;color:var(--ink)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";flex:none;width:32px;height:32px;border-radius:50%;background:#fff;color:var(--mauve);display:grid;place-items:center;font-size:22px;font-weight:600;transition:transform .2s}
+.faq details[open] summary:after{transform:rotate(45deg)}
+.faq details p{padding:0 0 22px;color:var(--muted)}
+
+/* final */
+.final{background:var(--rose);color:#fff;text-align:center;position:relative;overflow:hidden}
+.final .mark{position:absolute;width:520px;opacity:.12;left:50%;top:50%;transform:translate(-50%,-50%);filter:brightness(0) invert(1);pointer-events:none}
+.final .in{position:relative;display:flex;flex-direction:column;align-items:center;gap:22px}
+.final h2{font-size:clamp(40px,6vw,76px);line-height:1;color:#fff}
+.final p{font-size:19px;color:#fff;max-width:560px}.final .kit{width:100%;max-width:960px;aspect-ratio:16/9;margin-top:24px;border-radius:28px;overflow:hidden}
+.final .btn{background:var(--cream);color:var(--mauve);box-shadow:0 8px 0 var(--mauve-d)}
+.final .btn:hover{background:#fff}
+footer{background:var(--mauve-d);color:var(--cream);padding:56px 0 32px}
+.foot{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;align-items:flex-start}
+.foot img{height:26px;filter:brightness(0) invert(1);opacity:.9}
+.foot ul{list-style:none;display:flex;gap:28px;flex-wrap:wrap}
+.foot a{color:var(--cream)}.foot a:hover{color:var(--gold)}
+.copy{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);font-size:13px;color:var(--gold)}
+
+/* sticky buy */
+.sticky{position:fixed;left:50%;bottom:16px;transform:translate(-50%,140%);z-index:40;display:flex;align-items:center;gap:18px;background:#fff;border-radius:999px;padding:8px 8px 8px 12px;box-shadow:0 20px 50px -20px rgba(92,61,67,.55);transition:transform .3s;width:min(640px,calc(100% - 24px))}
+.sticky.show{transform:translate(-50%,0)}
+.sticky .th{width:48px;height:48px;border-radius:50%;overflow:hidden;flex:none;background:var(--cream)}
+.sticky .tx{flex:1;min-width:0;line-height:1.2}
+.sticky .tx b{display:block;color:var(--mauve);font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sticky .tx span{font-size:14px;color:var(--muted)}
+.sticky .btn{padding:14px 24px;font-size:15px;box-shadow:none}
+.sticky .btn:hover{transform:none}
+
+/* motion */
+.progress{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--gold),var(--rose));z-index:60}
+header{transition:padding .25s}header.sm{padding:8px 0}header.sm .nav{padding-top:8px;padding-bottom:8px}
+.nav .cart{transition:transform .2s}.nav .cart.bump{animation:bump .5s}
+@keyframes bump{30%{transform:scale(1.18)}60%{transform:scale(.95)}}
+.banner .bg img.slot{animation:kb 16s cubic-bezier(.2,.7,.2,1) both}
+@keyframes kb{from{transform:scale(1.1)}to{transform:scale(1)}}
+.banner .bg{overflow:hidden}
+.banner h1,.banner .box-b .btn{animation:up .9s cubic-bezier(.2,.8,.2,1) both}.banner .box-b .btn{animation-delay:.25s}
+@keyframes up{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.rvl{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.8,.2,1) var(--d,0s),transform .7s cubic-bezier(.2,.8,.2,1) var(--d,0s)}
+.rvl.in{opacity:1;transform:none}
+.main-img .pane img.slot{transition:transform .6s}.main-img:hover .pane.on img.slot{transform:scale(1.04)}
+.main-img .pane{transition:opacity .45s}
+.sticker{animation:wob 4s ease-in-out infinite}@keyframes wob{50%{transform:rotate(-4deg) scale(1.05)}}
+.bundle{transition:border-color .15s,transform .2s,box-shadow .2s}.bundle.on{box-shadow:0 14px 30px -18px rgba(122,83,89,.6)}
+.bundle.rec:before{content:"Recomendado para você";position:absolute;top:-11px;left:20px;background:var(--mauve);color:#fff;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:4px 12px;border-radius:999px}
+.stock{display:flex;flex-direction:column;gap:8px}.stock-t{font-size:14px;font-weight:600;color:var(--mauve)}
+.stock-bar{height:8px;border-radius:99px;background:#fff;overflow:hidden}.stock-bar i{display:block;height:100%;width:27%;border-radius:99px;background:linear-gradient(90deg,var(--rose),var(--mauve));transition:width 1s}
+.plan-note{background:#fff;border-radius:16px;padding:14px 18px;font-size:15px;color:var(--mauve);font-weight:600;animation:up .5s both}
+.fly{position:fixed;z-index:80;width:56px;height:56px;border-radius:50%;overflow:hidden;pointer-events:none;box-shadow:0 10px 30px -10px rgba(92,61,67,.6)}
+.ing{transition:transform .35s,background .35s}.ing .im{overflow:hidden}.ing .im img.slot{transition:transform .8s}
+.ing:hover{transform:translateY(-6px);background:rgba(255,255,255,.12)}.ing:hover .im img.slot{transform:scale(1.07)}
+.pcard{transition:transform .3s}.pcard:hover{transform:translateY(-6px) rotate(-1deg)}
+.step{transition:transform .3s,box-shadow .3s}.step.lit{transform:translateY(-6px);box-shadow:0 24px 50px -30px rgba(122,83,89,.6)}.step.lit .k{background:var(--mauve);color:#fff}.step .k{transition:background .3s,color .3s}
+.split .ph img.slot{transition:transform .1s linear}
+.faq details[open] p{animation:up .4s both}
+.final .mark{transition:transform .1s linear}
+/* before/after slider */
+.baslide{position:relative;aspect-ratio:4/3;border-radius:18px;overflow:hidden;cursor:ew-resize;touch-action:pan-y;user-select:none}
+.baslide .l{position:absolute;inset:0}.baslide .d{clip-path:inset(0 0 0 var(--p))}
+.baslide label{position:absolute;z-index:3;bottom:12px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;padding:5px 12px;border-radius:999px;pointer-events:none}
+.baslide .la{left:12px;background:#fff;color:var(--mauve)}.baslide .ld{right:12px;background:var(--mauve);color:#fff}
+.hdl{position:absolute;z-index:4;top:0;bottom:0;left:var(--p);width:2px;margin-left:-1px;background:#fff;pointer-events:none}
+.hdl span{position:absolute;top:50%;left:50%;width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;background:#fff;color:var(--mauve);display:grid;place-items:center;font-weight:800;font-size:18px;box-shadow:0 6px 20px rgba(0,0,0,.18)}
+.bacard p{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.bacard p em{font-style:normal;font-size:13px;font-weight:700;color:var(--rose)}
+/* quiz */
+.quiz-sec{padding-top:0}
+.quiz{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);border-radius:32px;overflow:hidden;background:#fff;box-shadow:0 40px 80px -50px rgba(122,83,89,.55)}
+.q-side{background:var(--mauve);color:#fff;padding:48px;display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden}
+.q-side img{position:absolute;width:320px;right:-80px;bottom:-60px;opacity:.18;animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.q-side .eyebrow{color:var(--gold)}.q-side h2{font-size:clamp(32px,3.6vw,46px);line-height:1.05;color:var(--cream)}.q-side p{color:#F3E6E0;font-size:17px;max-width:360px}
+.q-dots{display:flex;gap:8px;margin-top:auto}.q-dots i{width:28px;height:6px;border-radius:9px;background:rgba(255,255,255,.25);transition:background .3s,width .3s}.q-dots i.on{background:var(--gold);width:44px}
+.q-main{position:relative;padding:48px;min-height:380px;display:grid}
+.q-step{grid-area:1/1;display:flex;flex-direction:column;gap:20px;justify-content:center;opacity:0;transform:translateX(30px);pointer-events:none;transition:opacity .45s,transform .45s}
+.q-step.on{opacity:1;transform:none;pointer-events:auto}.q-step.out{transform:translateX(-30px)}
+.q-l{font-family:"Serotiva",serif;font-size:30px;line-height:1.1;color:var(--mauve)}
+.q-in{font:inherit;font-size:18px;padding:16px 22px;border-radius:999px;border:2px solid var(--cream);background:var(--cream-2);color:var(--ink);outline:none;transition:border-color .2s}.q-in:focus{border-color:var(--rose)}
+.q-step .btn{align-self:flex-start}
+.q-opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.q-opts button{font:inherit;font-weight:700;font-size:16px;color:var(--mauve);background:var(--cream-2);border:2px solid transparent;border-radius:18px;padding:18px;text-align:left;cursor:pointer;transition:transform .15s,border-color .15s,background .15s}
+.q-opts button:hover{transform:translateY(-2px);border-color:var(--blush)}.q-opts button.sel{background:var(--blush-2);border-color:var(--mauve)}
+.q-res h3{font-size:clamp(28px,3vw,38px);line-height:1.1;color:var(--mauve)}
+.q-tl{list-style:none;display:flex;flex-direction:column;gap:10px}
+.q-tl li{display:grid;grid-template-columns:86px minmax(0,1fr);gap:12px;align-items:baseline;font-size:15px;color:var(--muted);opacity:0;animation:up .5s both}
+.q-tl li b{font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--rose)}
+.q-tip{background:var(--cream-2);border-radius:16px;padding:14px 18px;font-size:15px;color:var(--mauve);font-weight:600}
+.q-act{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.q-redo{font:inherit;font-weight:700;color:var(--rose);background:none;border:0;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+/* toast */
+.toast{position:fixed;left:16px;bottom:16px;z-index:45;display:flex;gap:12px;align-items:center;background:#fff;border-radius:18px;padding:10px 18px 10px 10px;box-shadow:0 20px 50px -20px rgba(92,61,67,.55);transform:translateY(160%);transition:transform .5s cubic-bezier(.2,.8,.2,1);max-width:320px;font-size:14px;line-height:1.3}
+.toast.show{transform:none}.toast .tth{width:44px;height:44px;border-radius:12px;overflow:hidden;flex:none}.toast b{display:block;color:var(--mauve)}.toast span{color:var(--muted)}
+body.st-on .toast{bottom:92px}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.rvl{opacity:1;transform:none}}
+@media (max-width:980px){.quiz{grid-template-columns:minmax(0,1fr)}.q-side,.q-main{padding:32px 24px}.q-main{min-height:420px}
+
+.hero-grid,.split{grid-template-columns:minmax(0,1fr);gap:36px}
+.gallery{position:static}
+.problem-grid,.ing-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.nav ul{display:none}
+.guar .box{grid-template-columns:minmax(0,1fr);text-align:center;justify-items:center;padding:32px 24px}
+}
+@media (max-width:640px){
+.sec{padding:72px 0}
+.gallery{grid-template-columns:minmax(0,1fr)}
+.thumbs{flex-direction:row;order:2}.thumb{width:64px}
+.problem-grid,.ing-grid,.results,.steps,.ba{grid-template-columns:minmax(0,1fr)}
+.trust{grid-template-columns:repeat(3,minmax(0,1fr))}
+.cmp th,.cmp td{padding:14px 10px;font-size:14px}
+.timer{flex-direction:column;align-items:flex-start}.q-opts{grid-template-columns:minmax(0,1fr)}.toast{display:none}
+}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="track" id="topTrack"><span>✦ Frete grátis para todo o Brasil</span><span>✦ Compre 2, leve 3 — só hoje</span><span>✦ Garantia de 30 dias ou seu dinheiro de volta</span><span>✦ Até 6x sem juros</span></div></div>
+<div class="progress" id="progress"></div>
+<header><div class="wrap"><nav class="nav"><img src="assets/eclave-wordmark.png" alt="Eclave"><ul><li><a href="#produto">Home</a></li><li><a href="#ativos">Ativos</a></li><li><a href="#resultados">Resultados</a></li><li><a href="#faq">Dúvidas</a></li></ul><a class="cart" id="cart" href="#produto">Sacola <b id="cartN">0</b></a></nav></div></header>
+
+<section class="banner" data-screen-label="01 Banner"><div class="bg"><img class="slot" id="hero-banner" src="assets/img/hero-sorriso.jpg" alt="Mulher sorrindo com pele uniforme" fetchpriority="high"></div><div class="copy-b"><div class="wrap"><div class="box-b"><h1>Clareie, renove e <b>revele uma pele mais radiante</b></h1><a class="btn" href="#produto">Quero este produto</a></div></div></div></section>
+<section class="hero" id="produto" data-screen-label="02 Produto">
+<div class="wrap hero-grid">
+<div class="gallery">
+<div class="thumbs" id="thumbs">
+<div class="thumb on" data-i="0"><img class="slot" id="thumb-1" src="assets/img/serum-mao-rosa.jpg" alt="Sérum Eclave na mão" loading="lazy" decoding="async"></div>
+<div class="thumb" data-i="1"><img class="slot" id="thumb-2" src="assets/img/serum-textura.jpg" alt="Textura do sérum" loading="lazy" decoding="async"></div>
+<div class="thumb" data-i="2"><img class="slot" id="thumb-3" src="assets/img/serum-rosto.jpg" alt="Aplicação do sérum no rosto" loading="lazy" decoding="async"></div>
+<div class="thumb" data-i="3"><img class="slot" id="thumb-4" src="assets/img/caixa-frasco.jpg" alt="Caixa e frasco do Sérum Eclave" loading="lazy" decoding="async"></div>
+</div>
+<div class="main-img" id="mainImg">
+<div class="sticker"><div><big>-40%</big>só hoje</div></div>
+<div class="pane on"><img class="slot" id="prod-1" src="assets/img/serum-mao-rosa.jpg" alt="Sérum Clareador Noturno Eclave na mão" loading="lazy" decoding="async"></div>
+<div class="pane"><img class="slot" id="prod-2" src="assets/img/serum-textura.jpg" alt="Textura do sérum clareador" loading="lazy" decoding="async"></div>
+<div class="pane"><img class="slot" id="prod-3" src="assets/img/serum-rosto.jpg" alt="Sérum aplicado no rosto" loading="lazy" decoding="async"></div>
+<div class="pane"><img class="slot" id="prod-4" src="assets/img/caixa-frasco.jpg" alt="Caixa e frasco do Sérum Clareador Noturno" loading="lazy" decoding="async"></div>
+</div>
+</div>
+<div class="info">
+<div class="rating"><span class="stars">★★★★★</span> 4,9 · 2.847 avaliações</div>
+<h2 class="serif" style="font-size:clamp(38px,4.4vw,58px);line-height:1.02;color:var(--mauve)">Sérum Clareador <em style="color:var(--rose)">Noturno</em> Eclave</h2>
+<p class="lede">Clareie, renove e revele uma pele mais radiante. Age enquanto você dorme para uniformizar manchas, melasma e marcas de acne. 30 ml.</p>
+<div class="pills"><span class="pill"><i></i>Retinaldeído</span><span class="pill"><i></i>Centella Asiática</span><span class="pill"><i></i>Copper Peptide</span><span class="pill"><i></i>Dermatologicamente testado</span></div>
+<div class="timer"><span>A oferta termina em</span><div class="t"><span id="hh">00</span><span id="mm">00</span><span id="ss">00</span></div></div>
+<div class="stock"><div class="stock-t">Restam <b id="stockN">27</b> unidades com desconto</div><div class="stock-bar"><i id="stockBar"></i></div></div>
+<div class="bundles" id="bundles">
+<div class="bundle" data-q="1" data-p="129,90" data-o="189,90"><span class="dot"></span><div><h4>1 unidade</h4><small>Tratamento de 30 dias</small></div><div class="pr"><b>R$ 129,90</b><s>R$ 189,90</s></div></div>
+<div class="bundle on" data-q="2" data-p="219,80" data-o="379,80"><span class="tag">Mais vendido</span><span class="dot"></span><div><h4>2 unidades</h4><small>R$ 109,90 cada · 60 dias</small></div><div class="pr"><b>R$ 219,80</b><s>R$ 379,80</s></div></div>
+<div class="bundle" data-q="3" data-p="259,80" data-o="569,70"><span class="tag g">Compre 2, leve 3</span><span class="dot"></span><div><h4>3 unidades</h4><small>R$ 86,60 cada · 90 dias</small></div><div class="pr"><b>R$ 259,80</b><s>R$ 569,70</s></div></div>
+</div>
+<div class="plan-note" id="planNote" hidden></div>
+<button class="btn full" id="buy" data-next="upsell.html"><span id="buyL">Quero meu clareador</span> · <span id="buyP">R$ 219,80</span></button>
+<p class="pay">Pix com 5% off · até 6x sem juros no cartão</p>
+<div class="trust">
+<div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"></path><circle cx="7" cy="18" r="2"></circle><circle cx="17" cy="18" r="2"></circle></svg>Frete grátis</div>
+<div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg>Compra segura</div>
+<div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5"></path></svg>30 dias de garantia</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="band"><div class="track" id="bandTrack"><span>Pele uniforme <img src="assets/eclave-simbolo.png" alt=""> Brilho natural <img src="assets/eclave-simbolo.png" alt=""> Adeus manchas <img src="assets/eclave-simbolo.png" alt=""> Autoestima em dia <img src="assets/eclave-simbolo.png" alt=""></span></div></div>
+
+<section class="sec" data-screen-label="03 Problema">
+<div class="wrap">
+<div class="sec-h"><span class="eyebrow">Para quem é</span><h2>Manchas que não saem com nada?</h2><p>O creme age nas principais causas da pele irregular.</p></div>
+<div class="problem-grid">
+<div class="pcard"><span class="n">01</span><h3>Melasma</h3><p>Manchas escuras causadas por hormônios e exposição ao sol.</p></div>
+<div class="pcard"><span class="n">02</span><h3>Marcas de acne</h3><p>Pontos escuros que ficam depois das espinhas.</p></div>
+<div class="pcard"><span class="n">03</span><h3>Manchas de sol</h3><p>Sardas e manchas acumuladas ao longo dos anos.</p></div>
+<div class="pcard"><span class="n">04</span><h3>Pele opaca</h3><p>Tom irregular e pele sem viço, cansada.</p></div>
+</div>
+</div>
+</section>
+
+<section class="sec quiz-sec" id="quiz" data-screen-label="04 Quiz">
+<div class="wrap"><div class="quiz" id="quizBox">
+<div class="q-side"><img src="assets/eclave-simbolo-bege.png" alt=""><span class="eyebrow">Diagnóstico Eclave</span><h2>Monte sua rotina em 30 segundos</h2><p>Responda 3 perguntas e receba o plano ideal para a sua pele.</p><div class="q-dots" id="qDots"><i class="on"></i><i></i><i></i><i></i></div></div>
+<div class="q-main">
+<div class="q-step on" data-s="0"><label class="q-l" for="qName">Como podemos te chamar?</label><input id="qName" class="q-in" type="text" placeholder="Seu primeiro nome" autocomplete="given-name"><button class="btn" data-next>Começar</button></div>
+<div class="q-step" data-s="1"><p class="q-l">O que mais te incomoda hoje?</p><div class="q-opts" data-k="concern"><button data-v="melasma">Melasma</button><button data-v="acne">Marcas de acne</button><button data-v="sol">Manchas de sol</button><button data-v="opaca">Pele opaca</button></div></div>
+<div class="q-step" data-s="2"><p class="q-l">Como é a sua pele?</p><div class="q-opts" data-k="skin"><button data-v="sensivel">Sensível</button><button data-v="normal">Normal</button><button data-v="oleosa">Oleosa</button><button data-v="seca">Seca</button></div></div>
+<div class="q-step" data-s="3"><p class="q-l">Há quanto tempo você tem essas manchas?</p><div class="q-opts" data-k="time"><button data-v="1">Menos de 6 meses</button><button data-v="2">De 6 meses a 2 anos</button><button data-v="3">Mais de 2 anos</button></div></div>
+<div class="q-step q-res" data-s="4"><span class="eyebrow" id="rHi">Seu plano</span><h3 id="rTitle"></h3><ul class="q-tl" id="rTl"></ul><p class="q-tip" id="rTip"></p><div class="q-act"><button class="btn" id="rApply">Aplicar meu kit</button><button class="q-redo" id="rRedo">Refazer</button></div></div>
+</div>
+</div></div>
+</section>
+
+<section class="sec" style="padding-top:0" data-screen-label="05 Benefícios">
+<div class="wrap split">
+<div class="ph"><img class="slot" id="lifestyle" src="assets/img/modelo-maos.jpg" alt="Modelo segurando o sérum Eclave" loading="lazy" decoding="async"></div>
+<div class="txt">
+<span class="eyebrow">Por que Eclave</span>
+<h2>Uma rotina simples para uma pele luminosa</h2>
+<ul class="checks">
+<li><i>✓</i><span><b>Clareia manchas</b> de forma gradual e uniforme.</span></li>
+<li><i>✓</i><span><b>Renova a pele durante a noite</b>, no momento em que ela se regenera.</span></li>
+<li><i>✓</i><span><b>Acalma e fortalece</b> a barreira da pele.</span></li>
+<li><i>✓</i><span><b>Textura leve</b>, absorve rápido e não pesa.</span></li>
+</ul>
+<div><a class="btn" href="#produto">Quero este produto</a></div>
+</div>
+</div>
+</section>
+
+<section class="sec ingr" id="ativos" data-screen-label="06 Ativos">
+<div class="wrap">
+<div class="sec-h"><span class="eyebrow">Fórmula</span><h2>Ativos que trabalham juntos</h2><p>Três ativos que trabalham juntos durante a noite.</p></div>
+<div class="ing-grid">
+<div class="ing"><div class="im"><img class="slot" id="ing-1" src="assets/img/ing-retinaldeido.jpg" alt="Retinaldeído" loading="lazy" decoding="async"></div><div class="bd"><span class="role">Renovador</span><h3>Retinaldeído</h3><p>Acelera a renovação celular e ajuda a clarear manchas e marcas.</p></div></div>
+<div class="ing"><div class="im"><img class="slot" id="ing-2" src="assets/img/ing-centella.jpg" alt="Centella asiática" loading="lazy" decoding="async"></div><div class="bd"><span class="role">Calmante</span><h3>Centella Asiática</h3><p>Acalma, reduz a vermelhidão e fortalece a barreira da pele.</p></div></div>
+<div class="ing"><div class="im"><img class="slot" id="ing-3" src="assets/img/ing-copper.jpg" alt="Copper peptide" loading="lazy" decoding="async"></div><div class="bd"><span class="role">Firmador</span><h3>Copper Peptide</h3><p>Estimula colágeno e devolve firmeza e viço.</p></div></div>
+</div>
+</div>
+</section>
+
+<section class="sec" id="resultados" data-screen-label="07 Resultados">
+<div class="wrap">
+<div class="sec-h"><span class="eyebrow">Resultados</span><h2>Resultados visíveis em semanas</h2><p>Teste de percepção com usuárias após 4 semanas de uso.</p></div>
+<div class="results">
+<div class="res"><b data-to="94">0%</b><p>perceberam a pele mais uniforme</p></div>
+<div class="res"><b data-to="89">0%</b><p>notaram manchas mais claras</p></div>
+<div class="res"><b data-to="97">0%</b><p>sentiram a pele mais hidratada</p></div>
+</div>
+<div class="ba">
+<div class="bacard"><div class="baslide" style="--p:50%"><div class="l a"><img class="slot" id="ba1-antes" src="assets/img/ba1-antes.jpg" alt="Pele antes do uso" loading="lazy" decoding="async"></div><div class="l d"><img class="slot" id="ba1-depois" src="assets/img/ba1-depois.jpg" alt="Pele depois do uso" loading="lazy" decoding="async"></div><label class="la">Antes</label><label class="ld">Depois</label><div class="hdl"><span>‹ ›</span></div></div><p><b>Juliana, 34</b> · melasma · 6 semanas <em>Arraste para comparar</em></p></div>
+<div class="bacard"><div class="baslide" style="--p:50%"><div class="l a"><img class="slot" id="ba2-antes" src="assets/img/ba2-antes.jpg" alt="Pele antes do uso" loading="lazy" decoding="async"></div><div class="l d"><img class="slot" id="ba2-depois" src="assets/img/ba2-depois.jpg" alt="Pele depois do uso" loading="lazy" decoding="async"></div><label class="la">Antes</label><label class="ld">Depois</label><div class="hdl"><span>‹ ›</span></div></div><p><b>Camila, 27</b> · marcas de acne · 8 semanas <em>Arraste para comparar</em></p></div>
+</div>
+</div>
+</section>
+
+<section class="sec how" data-screen-label="08 Como usar">
+<div class="wrap">
+<div class="sec-h"><span class="eyebrow">Como usar</span><h2>3 passos, 2 minutos por noite</h2></div>
+<div class="steps">
+<div class="step"><div class="im"><img class="slot" id="step-1" src="assets/img/passo-limpeza.jpg" alt="Limpeza do rosto" loading="lazy" decoding="async"></div><span class="k">1</span><h3>Limpe</h3><p>À noite, lave o rosto com um sabonete suave e seque bem.</p></div>
+<div class="step"><div class="im"><img class="slot" id="step-2" src="assets/img/aplicando.jpg" alt="Aplicando o sérum" loading="lazy" decoding="async"></div><span class="k">2</span><h3>Aplique</h3><p>Espalhe 3 a 4 gotas no rosto, com leves batidinhas até absorver.</p></div>
+<div class="step"><div class="im"><img class="slot" id="step-3" src="assets/img/passo-protetor.jpg" alt="Aplicando protetor solar" loading="lazy" decoding="async"></div><span class="k">3</span><h3>Proteja</h3><p>Pela manhã, use sempre protetor solar.</p></div>
+</div>
+<p class="note">Use por pelo menos 4 semanas para ver os melhores resultados.</p>
+</div>
+</section>
+
+<section class="sec" data-screen-label="09 Comparativo">
+<div class="wrap">
+<div class="sec-h"><span class="eyebrow">Comparativo</span><h2>Por que escolher Eclave?</h2></div>
+<div class="cmp"><table>
+<thead><tr><th></th><th class="us"><img src="assets/eclave-wordmark.png" alt="Eclave"></th><th>Outros</th></tr></thead>
+<tbody>
+<tr><td>Retinaldeído + Centella + Copper Peptide</td><td class="us">✓</td><td class="no">✕</td></tr>
+<tr><td>Livre de hidroquinona</td><td class="us">✓</td><td class="no">✕</td></tr>
+<tr><td>Ação noturna renovadora</td><td class="us">✓</td><td class="no">✕</td></tr>
+<tr><td>Textura leve, não oleosa</td><td class="us">✓</td><td class="no">✕</td></tr>
+<tr><td>Garantia de 30 dias</td><td class="us">✓</td><td class="no">✕</td></tr>
+</tbody></table></div>
+</div>
+</section>
+
+<section class="sec" style="padding-top:0" data-screen-label="10 Avaliações">
+<div class="wrap">
+<div class="sec-h"><span class="eyebrow">Avaliações</span><h2>Quem usa, ama</h2></div>
+<div class="rv-top"><b>4,9</b><div><div class="stars">★★★★★</div>2.847 avaliações verificadas</div></div>
+<div class="reviews">
+<div class="rv"><div class="stars">★★★★★</div><h4>Meu melasma clareou muito</h4><p>Já tinha tentado de tudo. Em um mês as manchas da testa ficaram bem mais fracas.</p><div class="who">Fernanda R. <span>✓ Compra verificada</span></div></div>
+<div class="rv"><div class="ph"><img class="slot" id="rv-1" src="assets/img/cliente-caixa.jpg" alt="Cliente com a caixa Eclave" loading="lazy" decoding="async"></div><div class="stars">★★★★★</div><h4>Textura maravilhosa</h4><p>Absorve rápido, não deixa brilho e dá pra usar antes da maquiagem.</p><div class="who">Beatriz L. <span>✓ Compra verificada</span></div></div>
+<div class="rv"><div class="stars">★★★★★</div><h4>Manchas de sol mais suaves</h4><p>Uso toda noite e a diferença já apareceu na terceira semana.</p><div class="who">Patrícia M. <span>✓ Compra verificada</span></div></div>
+<div class="rv"><div class="stars">★★★★★</div><h4>Comprei o kit de 3</h4><p>Vale muito a pena. Eu e minha mãe estamos usando e amando.</p><div class="who">Larissa T. <span>✓ Compra verificada</span></div></div>
+<div class="rv"><div class="stars">★★★★☆</div><h4>Marcas de espinha sumindo</h4><p>Resultado aos poucos, mas consistente. Pele bem mais uniforme.</p><div class="who">Gabriela S. <span>✓ Compra verificada</span></div></div>
+<div class="rv"><div class="ph"><img class="slot" id="rv-2" src="assets/img/necessaire.jpg" alt="Nécessaire Eclave" loading="lazy" decoding="async"></div><div class="stars">★★★★★</div><h4>Chegou super rápido</h4><p>Embalagem linda e o sérum tem um cheirinho suave. Já virou rotina.</p><div class="who">Amanda C. <span>✓ Compra verificada</span></div></div>
+</div>
+</div>
+</section>
+
+<section class="sec guar" data-screen-label="11 Garantia">
+<div class="wrap"><div class="box">
+<div class="seal"><div><big>30</big>dias de<br>garantia</div></div>
+<div><h2>Satisfação garantida ou seu dinheiro de volta</h2><p>Experimente por 30 dias. Se não gostar, devolvemos 100% do valor, sem burocracia.</p></div>
+<a class="btn" href="#produto">Experimentar agora</a>
+</div></div>
+</section>
+
+<section class="sec" id="faq" data-screen-label="12 FAQ">
+<div class="wrap">
+<div class="sec-h"><span class="eyebrow">Dúvidas</span><h2>Perguntas frequentes</h2></div>
+<div class="faq">
+<details open><summary>Em quanto tempo vejo resultado?</summary><p>A maioria das clientes percebe a pele mais uniforme entre 2 e 4 semanas de uso contínuo, todas as noites.</p></details>
+<details><summary>Serve para pele sensível?</summary><p>Sim. A fórmula é dermatologicamente testada e a Centella ajuda a acalmar a pele. Nas primeiras semanas, comece usando em noites alternadas.</p></details>
+<details><summary>Posso usar durante o dia?</summary><p>O sérum é noturno. Durante o dia, use protetor solar para proteger os resultados.</p></details>
+<details><summary>Grávidas podem usar?</summary><p>Por conter retinaldeído, não é indicado durante a gestação e a amamentação. Consulte seu médico.</p></details>
+<details><summary>Qual o prazo de entrega?</summary><p>Enviamos em até 24h úteis. O prazo médio é de 3 a 10 dias úteis, dependendo da região.</p></details>
+<details><summary>Como funciona a garantia?</summary><p>Se não ficar satisfeita em até 30 dias, entre em contato com nosso atendimento e devolvemos o valor integral.</p></details>
+</div>
+</div>
+</section>
+
+<section class="sec final" data-screen-label="13 CTA final">
+<img class="mark" src="assets/eclave-simbolo.png" alt="">
+<div class="wrap in">
+<h2>Revele a sua pele mais radiante</h2>
+<p>Aproveite a oferta de hoje: compre 2, leve 3 e ganhe frete grátis.</p>
+<a class="btn" href="#produto">Quero este produto</a>
+<div class="kit"><img class="slot" id="final-kit" src="assets/img/kit-caixas.jpg" alt="Kit de caixas Eclave" loading="lazy" decoding="async"></div>
+</div>
+</section>
+
+<footer><div class="wrap">
+<div class="foot"><img src="assets/eclave-wordmark.png" alt="Eclave"><ul><li><a href="#">Política de trocas</a></li><li><a href="#">Privacidade</a></li><li><a href="#">Rastrear pedido</a></li><li><a href="#">Contato</a></li></ul></div>
+<p class="copy">© 2026 Eclave. Todos os direitos reservados.</p>
+</div></footer>
+
+<div class="toast" id="toast"><div class="tth"><img class="slot" id="toast-thumb" src="assets/img/serum-mao-rosa.jpg" alt="" loading="lazy" decoding="async"></div><div><b id="toastN"></b><span id="toastT"></span></div></div>
+<div class="sticky" id="sticky"><div class="th"><img class="slot" id="sticky-thumb" src="assets/img/serum-mao-rosa.jpg" alt="" loading="lazy" decoding="async"></div><div class="tx"><b>Sérum Clareador Noturno</b><span id="stP">2 unidades · R$ 219,80</span></div><a class="btn" href="#produto" id="stBtn">Comprar</a></div>
+
+<script>
+['topTrack','bandTrack'].forEach(id=>{const t=document.getElementById(id);t.innerHTML+=t.innerHTML;});
+document.querySelectorAll('#thumbs .thumb').forEach(th=>th.addEventListener('click',()=>{const i=+th.dataset.i;document.querySelectorAll('#thumbs .thumb').forEach((x,j)=>x.classList.toggle('on',j===i));document.querySelectorAll('#mainImg .pane').forEach((x,j)=>x.classList.toggle('on',j===i));}));
+const setB=b=>{document.querySelectorAll('.bundle').forEach(x=>x.classList.toggle('on',x===b));const q=b.dataset.q,p='R$ '+b.dataset.p;document.getElementById('buyP').textContent=p;document.getElementById('stP').textContent=q+(q==='1'?' unidade':' unidades')+' · '+p;};
+document.querySelectorAll('.bundle').forEach(b=>b.addEventListener('click',()=>setB(b)));
+let n=0;document.getElementById('buy').addEventListener('click',e=>{const b=document.querySelector('.bundle.on');n+=+b.dataset.q;document.getElementById('cartN').textContent=n;const el=e.currentTarget,o=el.innerHTML;el.textContent='Adicionado à sacola ✓';setTimeout(()=>el.innerHTML=o,1400);});
+const KEY='eclave-offer-end';let end=+localStorage.getItem(KEY);if(!end||end<Date.now()){end=Date.now()+ (2*3600+47*60+12)*1000;localStorage.setItem(KEY,end);}
+const pad=v=>String(v).padStart(2,'0');const tick=()=>{let s=Math.max(0,Math.floor((end-Date.now())/1000));hh.textContent=pad(Math.floor(s/3600));mm.textContent=pad(Math.floor(s%3600/60));ss.textContent=pad(s%60);};tick();setInterval(tick,1000);
+const hero=document.getElementById('produto'),st=document.getElementById('sticky');addEventListener('scroll',()=>st.classList.toggle('show',hero.getBoundingClientRect().bottom<0),{passive:true});
+
+/* motion & personalization */
+const RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const prog=document.getElementById('progress'),hdr=document.querySelector('header'),ph=document.querySelector('.split .ph img.slot'),mark=document.querySelector('.final .mark');
+const onScroll=()=>{const d=document.documentElement,y=d.scrollTop;prog.style.transform='scaleX('+(y/(d.scrollHeight-d.clientHeight||1))+')';hdr.classList.toggle('sm',y>60);document.body.classList.toggle('st-on',st.classList.contains('show'));
+if(!RM){const r=ph.parentElement.getBoundingClientRect();ph.style.transform='scale(1.12) translateY('+((r.top+r.height/2-innerHeight/2)*-.06)+'px)';const f=mark.parentElement.getBoundingClientRect();mark.style.transform='translate(-50%,-50%) rotate('+(f.top*.05)+'deg)';}};
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+const groups=['.sec-h','.problem-grid .pcard','.split .ph','.split .txt','.quiz','.ing','.res','.bacard','.step','.cmp','.reviews .rv','.guar .box','.faq details','.final .in>*','.info>*'];
+groups.forEach(s=>document.querySelectorAll(s).forEach((el,i)=>{el.classList.add('rvl');el.style.setProperty('--d',(Math.min(i,6)*.08)+'s')}));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rvl').forEach(el=>io.observe(el));
+// counters
+const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cio.unobserve(e.target);const el=e.target,to=+el.dataset.to,t0=performance.now();const f=t=>{const k=Math.min(1,(t-t0)/1400),v=Math.round(to*(1-Math.pow(1-k,3)));el.textContent=v+'%';if(k<1)requestAnimationFrame(f)};RM?el.textContent=to+'%':requestAnimationFrame(f)}),{threshold:.6});
+document.querySelectorAll('.res b[data-to]').forEach(el=>cio.observe(el));
+// steps highlight
+const sio=new IntersectionObserver(es=>es.forEach(e=>e.target.classList.toggle('lit',e.isIntersecting)),{rootMargin:'-45% 0px -45% 0px'});document.querySelectorAll('.step').forEach(s=>sio.observe(s));
+// before/after sliders
+document.querySelectorAll('.baslide').forEach(el=>{let drag=false;const set=x=>{const r=el.getBoundingClientRect();el.style.setProperty('--p',Math.max(0,Math.min(100,(x-r.left)/r.width*100))+'%')};
+el.addEventListener('pointerdown',e=>{drag=true;el.setPointerCapture(e.pointerId);set(e.clientX);e.preventDefault()});el.addEventListener('pointermove',e=>{if(drag)set(e.clientX)});['pointerup','pointercancel'].forEach(t=>el.addEventListener(t,()=>drag=false));
+if(!RM){const hio=new IntersectionObserver(es=>{if(!es[0].isIntersecting)return;hio.disconnect();const t0=performance.now();const f=t=>{const k=(t-t0)/1800;if(k>=1||drag){if(!drag)el.style.setProperty('--p','50%');return}el.style.setProperty('--p',(50+Math.sin(k*Math.PI*2)*22)+'%');requestAnimationFrame(f)};setTimeout(()=>requestAnimationFrame(f),300)},{threshold:.6});hio.observe(el)}});
+// fly to cart
+const cart=document.getElementById('cart');
+document.getElementById('buy').addEventListener('click',e=>{if(RM)return;const a=e.currentTarget.getBoundingClientRect(),b=cart.getBoundingClientRect();const f=document.createElement('div');f.className='fly';f.innerHTML='<img src="assets/img/serum-mao-rosa.jpg" style="width:100%;height:100%;object-fit:cover">';document.body.appendChild(f);const x0=a.left+a.width/2-28,y0=a.top-10,x1=b.left+b.width/2-28,y1=b.top+b.height/2-28;
+f.animate([{transform:'translate('+x0+'px,'+y0+'px) scale(1)'},{transform:'translate('+((x0+x1)/2)+'px,'+(Math.min(y0,y1)-120)+'px) scale(.8)',offset:.5},{transform:'translate('+x1+'px,'+y1+'px) scale(.2)',opacity:.4}],{duration:900,easing:'cubic-bezier(.5,0,.3,1)'}).onfinish=()=>{f.remove();cart.classList.remove('bump');void cart.offsetWidth;cart.classList.add('bump')};
+const sn=document.getElementById('stockN');const v=Math.max(3,+sn.textContent-(+document.querySelector('.bundle.on').dataset.q));sn.textContent=v;document.getElementById('stockBar').style.width=v+'%';},true);
+// social proof toasts
+const buyers=[['Fernanda','São Paulo','2 unidades'],['Juliana','Belo Horizonte','3 unidades'],['Camila','Curitiba','1 unidade'],['Patrícia','Recife','3 unidades'],['Amanda','Salvador','2 unidades'],['Larissa','Porto Alegre','2 unidades']];let bi=0;const toast=document.getElementById('toast');
+const showT=()=>{const [n,c,q]=buyers[bi++%buyers.length];toastN.textContent=n+' de '+c;toastT.textContent='comprou '+q+' há '+(2+bi%9)+' min';toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),4500)};setTimeout(()=>{showT();setInterval(showT,16000)},7000);
+// quiz
+const QK='eclave-quiz';const qa=JSON.parse(localStorage.getItem(QK)||'{}');const steps=[...document.querySelectorAll('.q-step')],dots=[...document.querySelectorAll('#qDots i')];let cur=0;
+const go=s=>{steps[cur].classList.remove('on');steps[cur].classList.add('out');setTimeout(()=>steps.forEach(x=>x!==steps[s]&&x.classList.remove('out')),450);cur=s;steps[s].classList.remove('out');steps[s].classList.add('on');dots.forEach((d,i)=>d.classList.toggle('on',i<=Math.min(s,3)));if(s===4)result()};
+const qName=document.getElementById('qName');qName.value=qa.name||'';
+document.querySelector('[data-next]').addEventListener('click',()=>{qa.name=qName.value.trim().split(' ')[0];go(1)});qName.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();qa.name=qName.value.trim().split(' ')[0];go(1)}});
+document.querySelectorAll('.q-opts').forEach(g=>g.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{g.querySelectorAll('button').forEach(x=>x.classList.toggle('sel',x===b));qa[g.dataset.k]=b.dataset.v;setTimeout(()=>go(cur+1),260)})));
+const CON={melasma:'o melasma',acne:'as marcas de acne',sol:'as manchas de sol',opaca:'a pele opaca'};
+const TIP={sensivel:'Pele sensível: use em noites alternadas nas 2 primeiras semanas e depois passe para todas as noites.',normal:'Pele normal: use todas as noites, desde a primeira semana.',oleosa:'Pele oleosa: use todas as noites. A textura leve não deixa brilho.',seca:'Pele seca: aplique o sérum e, depois de absorvido, finalize com seu hidratante.'};
+const planQ=()=>{let q=+qa.time||2;if(qa.concern==='melasma')q=Math.max(q,3);if(qa.concern==='opaca')q=Math.min(q,2);return q};
+const result=()=>{const q=planQ(),days=q*30,nm=qa.name;document.getElementById('rHi').textContent=nm?nm+', este é o seu plano':'Seu plano';
+document.getElementById('rTitle').textContent='Tratamento de '+days+' dias para '+(CON[qa.concern]||'uniformizar a pele');
+const tl=[['Semana 1','A pele se adapta e fica mais macia.'],['Semana 3','O tom começa a ficar mais uniforme.'],['Semana 6','As manchas ficam visivelmente mais claras.'],['Semana 12','Resultado completo e duradouro.']].slice(0,q+1);
+document.getElementById('rTl').innerHTML=tl.map((x,i)=>'<li style="animation-delay:'+(i*.12)+'s"><b>'+x[0]+'</b>'+x[1]+'</li>').join('');
+document.getElementById('rTip').textContent=TIP[qa.skin]||TIP.normal;document.getElementById('rApply').textContent='Aplicar kit de '+q+(q>1?' unidades':' unidade');localStorage.setItem(QK,JSON.stringify(qa));};
+const applyPlan=(scroll)=>{const q=planQ();const b=document.querySelector('.bundle[data-q="'+q+'"]');document.querySelectorAll('.bundle').forEach(x=>x.classList.toggle('rec',x===b));setB(b);const nm=qa.name;const pn=document.getElementById('planNote');pn.hidden=false;pn.textContent=(nm?nm+', seu':'Seu')+' plano de '+(q*30)+' dias já está selecionado.';if(nm){document.getElementById('buyL').textContent='Quero meu kit, '+nm;document.querySelector('.sticky .tx b').textContent=nm+', seu kit de '+(q*30)+' dias'}
+if(scroll)scrollTo({top:document.getElementById('produto').getBoundingClientRect().top+scrollY-90,behavior:'smooth'})};
+document.getElementById('rApply').addEventListener('click',()=>applyPlan(true));document.getElementById('rRedo').addEventListener('click',()=>{document.querySelectorAll('.q-opts button').forEach(x=>x.classList.remove('sel'));go(0)});
+if(qa.concern&&qa.skin&&qa.time){applyPlan(false);go(4)}
+</script>
+<script>document.getElementById('buy').addEventListener('click',()=>setTimeout(()=>location.href='upsell.html',1300));</script>
+</body>
+</html>

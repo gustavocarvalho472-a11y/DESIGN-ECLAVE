@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Eclave · Compra confirmada</title>
+<meta name="description" content="Compra confirmada! Obrigada por escolher a Eclave.">
+<meta name="theme-color" content="#7A5359">
+<link rel="icon" type="image/png" href="assets/eclave-simbolo.png">
+<link rel="apple-touch-icon" href="assets/eclave-simbolo.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Eclave">
+<meta property="og:title" content="Eclave · Compra confirmada">
+<meta property="og:description" content="Compra confirmada! Obrigada por escolher a Eclave.">
+<meta property="og:url" content="https://gustavocarvalho472-a11y.github.io/DESIGN-ECLAVE/obrigado.html">
+<meta property="og:image" content="https://gustavocarvalho472-a11y.github.io/DESIGN-ECLAVE/assets/img/hero-sorriso.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:"Serotiva";src:url("assets/Serotiva-VF.ttf") format("truetype");font-weight:100 900;font-display:swap}
+:root{--cream:#F6E3CB;--cream-2:#FBF1E4;--paper:#FFFAF4;--mauve:#7A5359;--mauve-d:#5C3D43;--rose:#A5707D;--blush:#F3C9CC;--blush-2:#FBE4E3;--gold:#E4C9A2;--gold-d:#C9A676;--ink:#3E2A2E;--muted:#6E5358;--wine:#5A1428;--wine-2:#9C3A55;--r:22px}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{overflow-x:clip}
+body{font-family:"Figtree",system-ui,sans-serif;color:var(--ink);background:var(--blush-2);-webkit-font-smoothing:antialiased;line-height:1.5}
+a{color:var(--mauve);text-decoration:none}a:hover{color:var(--rose)}
+h1,h2,h3{font-family:"Serotiva",Georgia,serif;font-weight:500;letter-spacing:-.01em;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.tex{position:absolute;inset:0;pointer-events:none;background-size:180px 180px;animation:drift 80s linear infinite}
+@keyframes drift{to{background-position:180px 180px}}
+.btn{display:inline-flex;align-items:center;gap:12px;border:0;cursor:pointer;font:inherit;font-weight:700;font-size:14px;letter-spacing:.04em;text-transform:uppercase;padding:8px 8px 8px 26px;min-height:56px;border-radius:999px;background:var(--mauve);color:#fff;box-shadow:0 12px 28px rgba(92,61,67,.28);transition:transform .2s,background .2s}
+.btn:hover{color:#fff;background:var(--mauve-d);transform:translateY(-2px)}
+.btn .arr{width:40px;height:40px;border-radius:50%;background:var(--gold);color:var(--mauve-d);display:grid;place-items:center;transition:transform .25s}.btn:hover .arr{transform:translateX(3px)}
+.btn.light{background:var(--paper);color:var(--mauve-d)}.btn.light:hover{background:#fff;color:var(--mauve-d)}
+.ic{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex:none}
+/* hero */
+.hero{position:relative;text-align:center;padding:64px 0 0;overflow:hidden}
+.hero .tex{opacity:.05}
+.hero .wrap{position:relative;display:flex;flex-direction:column;align-items:center;gap:18px}
+.hero .wm{height:26px;opacity:.85}
+.ok{width:64px;height:64px;border-radius:50%;background:var(--mauve);display:grid;place-items:center;box-shadow:0 0 0 8px rgba(122,83,89,.1)}
+.ok svg{width:30px;height:30px;fill:none;stroke:var(--gold);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.ok path{stroke-dasharray:30;stroke-dashoffset:30;animation:draw .6s ease .5s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hero h1{font-size:clamp(38px,5.4vw,64px);line-height:1.02;color:var(--mauve-d)}
+.hero p{max-width:540px;color:var(--muted);font-size:16px}
+.hero p b{color:var(--mauve-d)}.hero p a{font-weight:700;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--rose)}
+/* photos */
+.stage{position:relative;margin-top:36px;height:clamp(240px,30vw,320px)}
+.bigword{position:absolute;left:50%;bottom:-6%;width:min(980px,120%);transform:translateX(-50%);opacity:.12;pointer-events:none}
+.row{position:relative;display:flex;justify-content:center;align-items:center;height:100%}
+.row img{width:clamp(110px,15vw,170px);aspect-ratio:3/4;object-fit:cover;border-radius:18px;border:5px solid #fff;margin:0 -12px;box-shadow:0 16px 34px rgba(62,42,46,.18);opacity:0;translate:0 40px;scale:.9;transition:opacity .5s ease,translate .7s cubic-bezier(.2,.8,.2,1.2),scale .7s cubic-bezier(.2,.8,.2,1.2),transform .45s cubic-bezier(.2,.7,.2,1),margin .45s cubic-bezier(.2,.7,.2,1)}
+.row img:nth-child(1){transform:rotate(-7deg)}.row img:nth-child(2){transform:rotate(3deg) translateY(-14px);z-index:1;transition-delay:.08s}.row img:nth-child(3){transform:rotate(-2deg);z-index:2;transition-delay:.16s}.row img:nth-child(4){transform:rotate(4deg) translateY(-10px);z-index:1;transition-delay:.24s}.row img:nth-child(5){transform:rotate(-5deg);transition-delay:.32s}
+.row.in img{opacity:1;translate:0 0;scale:1}
+.row.float img{animation:bob 5s ease-in-out infinite}.row.float img:nth-child(2){animation-delay:-1.2s}.row.float img:nth-child(3){animation-delay:-2.4s}.row.float img:nth-child(4){animation-delay:-3.1s}.row.float img:nth-child(5){animation-delay:-3.8s}
+@keyframes bob{50%{translate:0 -6px}}
+@media (hover:hover){.row:hover img{margin:0 6px}.row img:hover{transform:rotate(0) translateY(-10px) scale(1.06);z-index:3}}
+/* referral */
+.ref{position:relative;padding:0 0 88px}
+.win{position:relative;border-radius:28px;overflow:hidden;background:var(--mauve-d);box-shadow:0 40px 80px rgba(62,42,46,.25)}
+.win::after{content:"";position:absolute;left:6%;right:6%;bottom:-14px;height:14px;border-radius:0 0 24px 24px;background:var(--mauve);opacity:.5;z-index:-1}
+.wbar{display:flex;gap:7px;padding:14px 20px;background:var(--wine)}.wbar i{width:10px;height:10px;border-radius:50%;background:var(--gold)}.wbar i:nth-child(2){background:var(--blush)}.wbar i:nth-child(3){background:var(--cream);opacity:.6}
+.wbody{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+.wtext{padding:44px 40px;color:var(--cream);display:flex;flex-direction:column;gap:16px;justify-content:center}
+.wtext h2{font-size:clamp(32px,3.6vw,44px);line-height:1.05;color:#fff}
+.wtext h2 em{font-style:normal;color:var(--gold)}
+.wtext p{font-size:15px;color:rgba(246,227,203,.85)}
+.coupon{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1.5px dashed rgba(228,201,162,.6);border-radius:14px;padding:8px 8px 8px 16px;background:rgba(255,255,255,.04)}
+.coupon small{display:block;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(246,227,203,.6)}
+.coupon b{font-family:"Serotiva",serif;font-weight:600;font-size:22px;letter-spacing:.04em;color:var(--gold)}
+.copy{border:0;cursor:pointer;font:inherit;font-weight:700;font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:10px 14px;border-radius:10px;background:var(--gold);color:var(--mauve-d);display:flex;align-items:center;gap:6px;transition:background .2s}.copy:hover{background:var(--cream)}
+.copy.done{background:var(--cream)}
+.wimg{position:relative;min-height:420px}
+.wimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.wimg::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(92,61,67,.55),transparent 45%)}
+.tiers{position:absolute;z-index:2;right:22px;top:50%;translate:0 -50%;display:flex;flex-direction:column;gap:12px;width:min(330px,calc(100% - 44px))}
+.tier{display:flex;align-items:center;gap:14px;padding:10px 18px 10px 10px;border-radius:999px;background:rgba(255,250,244,.92);backdrop-filter:blur(8px);box-shadow:0 10px 24px rgba(62,42,46,.18);opacity:0;transform:translateX(30px);transition:opacity .5s ease,transform .6s cubic-bezier(.2,.8,.2,1.1)}
+.tier:nth-child(2){transition-delay:.12s}.tier:nth-child(3){transition-delay:.24s}
+.in .tier{opacity:1;transform:none}
+.tier .n{flex:none;width:46px;height:46px;border-radius:50%;background:var(--blush-2);display:grid;place-items:center;font-family:"Serotiva",serif;font-size:22px;font-weight:600;color:var(--wine)}
+.tier:nth-child(3) .n{background:var(--wine);color:var(--gold)}
+.tier h4{font-size:15px;font-weight:700;color:var(--wine);line-height:1.2}
+.tier p{font-size:12px;color:var(--muted);line-height:1.35}
+/* movement */
+.mov{position:relative;background:var(--mauve-d);color:var(--cream);text-align:center;padding:88px 0 0;overflow:hidden}
+.mov .tex{opacity:.08}
+.mov .wrap{position:relative;display:flex;flex-direction:column;align-items:center;gap:18px}
+.mov h2{font-size:clamp(34px,4.6vw,54px);line-height:1.05;color:#fff}.mov h2 em{font-style:normal;color:var(--gold)}
+.mov p{max-width:520px;color:rgba(246,227,203,.85)}
+.band{margin-top:64px;background:var(--gold);color:var(--mauve-d);overflow:hidden;white-space:nowrap;transform:rotate(-1.5deg);margin-left:-20px;margin-right:-20px}
+.band .track{display:inline-flex;gap:36px;padding:18px 0;animation:mq 34s linear infinite;align-items:center}
+.band span{display:inline-flex;gap:36px;align-items:center;font-family:"Serotiva",serif;font-size:26px}
+.band img{height:18px;filter:brightness(0) saturate(100%) invert(24%) sepia(14%) saturate(1200%) hue-rotate(305deg);opacity:.85}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* footer */
+footer{position:relative;background:var(--ink);color:var(--cream);padding:88px 0 0;overflow:hidden}
+footer .bg{position:absolute;inset:0;background:url("assets/img/caixa-frasco.jpg") center/cover;opacity:.18;filter:blur(3px) saturate(.8)}
+.fcard{position:relative;display:grid;grid-template-columns:1.3fr 1fr 1.2fr auto;gap:32px;padding:36px;border-radius:24px;border:1px solid rgba(246,227,203,.2);background:rgba(62,42,46,.55);backdrop-filter:blur(10px)}
+.fcard .wm{height:24px;filter:brightness(0) invert(1);opacity:.9;margin-bottom:14px}
+.fcard h5{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.fcard p,.fcard li{font-size:14px;color:rgba(246,227,203,.8);list-style:none}.fcard li+li{margin-top:8px}
+.fcard a{color:rgba(246,227,203,.9)}.fcard a:hover{color:#fff}
+.fcard small{display:block;margin-top:14px;font-size:12px;color:rgba(246,227,203,.55);line-height:1.5}
+.fbtns{display:flex;flex-direction:column;gap:10px}
+.fbtns a{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 16px 12px 20px;border-radius:999px;font-size:13px;font-weight:700;background:var(--paper);color:var(--mauve-d);transition:transform .2s}
+.fbtns a:hover{transform:translateY(-2px);color:var(--mauve-d)}
+.fbtns a+a{background:var(--gold)}
+.giant{position:relative;display:block;width:min(1000px,110%);margin:56px auto -4%;opacity:.12;filter:brightness(0) invert(1)}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease var(--d,0s),transform .7s cubic-bezier(.2,.7,.2,1) var(--d,0s)}
+.go .rv{opacity:1;transform:none}
+@media (max-width:820px){.wbody{grid-template-columns:1fr}.wtext{padding:32px 24px}.wimg{min-height:0;aspect-ratio:4/5}.tiers{right:auto;left:50%;top:auto;bottom:18px;translate:-50% 0}.fcard{grid-template-columns:1fr 1fr}.fbtns{grid-column:1/-1}}
+@media (max-width:640px){.hero{padding-top:44px}.row img{width:27vw;margin:0 -10px}.row img:nth-child(4),.row img:nth-child(5){display:none}.stage{height:220px}.fcard{grid-template-columns:1fr;padding:28px 24px}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv,.row img,.tier{opacity:1!important;transform:none;translate:0 0!important;scale:1!important}.ok path{stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+<section class="hero" data-screen-label="Confirmação">
+<div class="tex" data-c="#A5707D"></div>
+<div class="wrap">
+<img class="wm rv" src="assets/eclave-wordmark.png" alt="Eclave">
+<div class="ok rv" style="--d:.1s"><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg></div>
+<h1 class="rv" style="--d:.2s">Sua compra foi confirmada!</h1>
+<p class="rv" style="--d:.3s">Seu ritual noturno começa agora. Tenho uma missão pra você: grave o unboxing do seu kit e marque a <a href="#">@eclave</a>.</p>
+<p class="rv" style="--d:.35s">As postagens mais inspiradoras ganham bônus exclusivos da <b>Eclave</b>: Pix, promoções exclusivas e destaque no nosso Instagram.</p>
+<a class="btn rv" style="--d:.45s" href="#indique">Indique &amp; ganhe<span class="arr"><svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+</div>
+<div class="stage">
+<img class="bigword" src="assets/eclave-wordmark.png" alt="">
+<div class="row" id="row">
+<img src="assets/img/cliente-caixa.jpg" alt="">
+<img src="assets/img/serum-rosto.jpg" alt="">
+<img src="assets/img/hero-sorriso.jpg" alt="">
+<img src="assets/img/modelo-maos.jpg" alt="">
+<img src="assets/img/aplicando.jpg" alt="">
+</div>
+</div>
+</section>
+<section class="ref" id="indique" data-screen-label="Indique e ganhe">
+<div class="wrap">
+<div class="win" id="win">
+<div class="wbar"><i></i><i></i><i></i></div>
+<div class="wbody">
+<div class="wtext">
+<h2>Que tal ganhar <em>indicando</em> a Eclave?</h2>
+<p>Sua amiga ganha 10% de desconto no primeiro pedido.</p>
+<div class="coupon"><div><small>Seu cupom</small><b id="cp">INDICAECLAVE</b></div><button class="copy" id="copy"><svg class="ic" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"></rect><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path></svg><span>Copiar</span></button></div>
+<p>Além disso, você concorre a prêmios e promoções exclusivas. Quanto mais você indica, mais você ganha!</p>
+</div>
+<div class="wimg">
+<img src="assets/img/necessaire.jpg" alt="Kit Eclave">
+<div class="tiers">
+<div class="tier"><span class="n">1</span><div><h4>1 indicação</h4><p>Cupom de R$ 50 na próxima compra</p></div></div>
+<div class="tier"><span class="n">5</span><div><h4>5 indicações</h4><p>1 Sérum Clareador Noturno grátis</p></div></div>
+<div class="tier"><span class="n">10</span><div><h4>10 indicações</h4><p>Kit completo + acesso à comunidade Eclave</p></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="mov" data-screen-label="Comunidade">
+<div class="tex" data-c="#E4C9A2"></div>
+<div class="wrap">
+<h2>Agora você já faz parte do <em>#RitualEclave</em></h2>
+<p>Entre no grupo exclusivo da Eclave e acompanhe de perto a transformação que está acontecendo na pele de centenas de mulheres.</p>
+<a class="btn light" href="#">Grupo exclusivo Eclave<span class="arr"><svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+</div>
+<div class="band"><div class="track" id="track"><span>#RitualEclave <img src="assets/eclave-simbolo.png" alt=""> Pele iluminada <img src="assets/eclave-simbolo.png" alt=""> #RitualEclave <img src="assets/eclave-simbolo.png" alt=""> Uniformidade que se vê <img src="assets/eclave-simbolo.png" alt=""></span></div></div>
+</section>
+<footer>
+<div class="bg"></div>
+<div class="wrap">
+<div class="fcard">
+<div><img class="wm" src="assets/eclave-wordmark.png" alt="Eclave"><p>Clareamento noturno, com ciência.</p><small>CNPJ 00.000.000/0001-00<br>Endereço da empresa</small></div>
+<div><h5>Redes sociais</h5><ul><li><a href="#">@eclave</a></li><li><a href="#">TikTok</a></li></ul></div>
+<div><h5>Contatos</h5><ul><li><a href="#">(00) 00000-0000</a></li><li><a href="#">contato@eclave.com.br</a></li></ul></div>
+<div class="fbtns"><a href="#">Ver Instagram<svg class="ic" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r=".6"></circle></svg></a><a href="index.html">Voltar à loja<svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
+</div>
+</div>
+<img class="giant" src="assets/eclave-wordmark.png" alt="">
+</footer>
+<script>
+const $=id=>document.getElementById(id);const RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const im=new Image();im.onload=()=>document.querySelectorAll('.tex').forEach(el=>{const S=360,c=document.createElement('canvas');c.width=c.height=S;const x=c.getContext('2d'),w=96,h=w*766/1200;[[S/4,S/4],[S*3/4,S*3/4]].forEach(([cx,cy])=>x.drawImage(im,cx-w/2,cy-h/2,w,h));x.globalCompositeOperation='source-in';x.fillStyle=el.dataset.c;x.fillRect(0,0,S,S);el.style.backgroundImage=`url(${c.toDataURL()})`});im.src='assets/eclave-simbolo.png';
+requestAnimationFrame(()=>requestAnimationFrame(()=>document.body.classList.add('go')));
+const io=(el,fn,t=.3)=>new IntersectionObserver(([e],o)=>{if(e.isIntersecting){fn();o.disconnect()}},{threshold:t}).observe(el);
+const row=$('row');io(row,()=>{setTimeout(()=>{row.classList.add('in');if(!RM)setTimeout(()=>row.classList.add('float'),1100)},500)});
+io($('win'),()=>$('win').classList.add('in'),.35);
+const tr=$('track');tr.innerHTML+=tr.innerHTML;
+$('copy').onclick=async e=>{const b=e.currentTarget;try{await navigator.clipboard.writeText($('cp').textContent)}catch(_){}b.classList.add('done');b.querySelector('span').textContent='Copiado';setTimeout(()=>{b.classList.remove('done');b.querySelector('span').textContent='Copiar'},1800)};
+</script>
+</body>
+</html>

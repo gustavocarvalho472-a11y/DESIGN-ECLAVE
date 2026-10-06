@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Eclave · Oferta exclusiva</title>
+<meta name="description" content="Oferta exclusiva Eclave: leve mais um Sérum Clareador Noturno com 30% OFF.">
+<meta name="theme-color" content="#7A5359">
+<link rel="icon" type="image/png" href="assets/eclave-simbolo.png">
+<link rel="apple-touch-icon" href="assets/eclave-simbolo.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Eclave">
+<meta property="og:title" content="Eclave · Oferta exclusiva">
+<meta property="og:description" content="Oferta exclusiva Eclave: leve mais um Sérum Clareador Noturno com 30% OFF.">
+<meta property="og:url" content="https://gustavocarvalho472-a11y.github.io/DESIGN-ECLAVE/upsell.html">
+<meta property="og:image" content="https://gustavocarvalho472-a11y.github.io/DESIGN-ECLAVE/assets/img/hero-sorriso.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:"Serotiva";src:url("assets/Serotiva-VF.ttf") format("truetype");font-weight:100 900;font-display:swap}
+:root{--cream:#F6E3CB;--cream-2:#FBF1E4;--paper:#FFFAF4;--mauve:#7A5359;--mauve-d:#5C3D43;--rose:#A5707D;--blush:#F3C9CC;--blush-2:#FBE4E3;--gold:#E4C9A2;--gold-d:#C9A676;--ink:#3E2A2E;--muted:#6E5358;--r:22px;--sym:url("assets/eclave-simbolo.png")}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{overflow-x:clip}
+body{font-family:"Figtree",system-ui,sans-serif;color:var(--ink);background:var(--mauve-d);-webkit-font-smoothing:antialiased;line-height:1.5;position:relative;min-height:100vh}
+a{color:var(--mauve);text-decoration:none}a:hover{color:var(--rose)}
+h1,h2,.serif{font-family:"Serotiva",Georgia,serif;font-weight:500;letter-spacing:-.01em;text-wrap:balance}
+p{text-wrap:pretty}
+.sym{display:inline-block;height:auto;aspect-ratio:1200/766}
+.tex{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.09;background-size:180px 180px;animation:drift 80s linear infinite}
+@keyframes drift{to{background-position:180px 180px}}
+.bar,.head,.card,.logo{position:relative;z-index:1}
+.bar{background:var(--ink);color:var(--cream);display:flex;align-items:center;justify-content:center;gap:12px;padding:14px 20px;font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-align:center}
+.spin{width:15px;height:15px;border:2px solid rgba(228,201,162,.3);border-top-color:var(--gold);border-radius:50%;animation:spin .9s linear infinite;flex:none}
+@keyframes flip{0%,100%{transform:rotateY(0)}50%{transform:rotateY(180deg)}}
+.head{text-align:center;padding:52px 20px 44px;color:#fff}
+.head h1{font-size:clamp(30px,4.4vw,52px);line-height:1.08}
+.head h1 em{font-style:normal;color:var(--gold);display:block}
+.card{max-width:880px;width:calc(100% - 40px);margin:0 auto 64px;background:var(--blush-2);border-radius:32px;padding:52px clamp(20px,5vw,64px) 40px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:26px;overflow:hidden;box-shadow:0 0 0 1px var(--gold-d),0 0 0 8px var(--blush-2),0 0 0 9px rgba(228,201,162,.5),0 40px 80px rgba(30,15,20,.35)}
+.card>.wm{position:absolute;width:520px;right:-190px;bottom:-110px;opacity:.07;transform:rotate(-14deg);pointer-events:none;z-index:0}
+.card>*:not(.wm){position:relative;z-index:1}
+.card h2{font-size:clamp(28px,3.6vw,40px);line-height:1.12;color:var(--mauve-d)}
+.hl{background:var(--rose);color:#fff;padding:0 .2em;border-radius:6px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.sub{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:-12px;display:flex;align-items:center;gap:10px}
+.sub::before,.sub::after{content:"";width:28px;height:1px;background:var(--gold-d)}
+.hero{width:100%;max-width:640px;aspect-ratio:16/9;border-radius:var(--r);overflow:hidden;position:relative}
+.hero img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.08);transition:transform 1.6s cubic-bezier(.2,.7,.2,1)}
+.go .hero img{transform:scale(1)}
+.stamp{position:absolute;top:14px;right:14px;width:124px;height:124px;border-radius:50%;background:var(--gold);color:var(--mauve-d);display:grid;place-items:center;box-shadow:inset 0 0 0 3px var(--gold),inset 0 0 0 4px var(--gold-d),0 8px 20px rgba(62,42,46,.25);transform:scale(0) rotate(-40deg);transition:transform .6s cubic-bezier(.3,1.6,.5,1) 1s}
+.go .stamp{transform:none}
+
+.stamp .ring{position:absolute;inset:0;width:100%;height:100%;animation:spin 22s linear infinite}.stamp text{font:800 8.4px "Figtree",sans-serif;letter-spacing:.14em;fill:var(--mauve-d)}
+.stamp .core{width:66%;aspect-ratio:1;border-radius:50%;background:var(--mauve-d);color:var(--gold);display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1}
+.stamp big{font-family:"Serotiva",serif;font-size:34px;font-weight:600;letter-spacing:-.02em;display:flex;align-items:flex-start}.stamp sup{font-size:.5em;margin-top:.15em;margin-left:1px}.stamp .core span{font-weight:800;font-size:10px;letter-spacing:.32em;margin-left:.32em;margin-top:3px;color:var(--cream)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.price{display:flex;flex-direction:column;align-items:center;gap:6px}
+.price .de{font-size:15px;font-weight:600;color:var(--muted);display:flex;gap:6px;align-items:baseline}
+.price s{text-decoration:none;position:relative;color:var(--rose);font-weight:700}
+.price s::after{content:"";position:absolute;left:-2px;right:-2px;top:50%;height:2px;background:var(--rose);transform:scaleX(0);transform-origin:left;transition:transform .5s ease 1.3s}
+.go .price s::after{transform:scaleX(1)}
+.price .val{display:flex;align-items:flex-start;gap:10px;color:var(--mauve-d);margin:2px 0 4px}.price .pre{display:flex;flex-direction:column;align-items:flex-end;gap:2px;padding-top:.9em;font-weight:700;line-height:1.1}.price .pre small{font-size:16px}.price .pre small+small{font-size:22px;color:var(--mauve)}
+.price .val b{font-family:"Serotiva",serif;font-size:clamp(84px,11vw,120px);line-height:.9;color:var(--mauve);font-weight:650;letter-spacing:-.03em;font-variant-numeric:tabular-nums;display:flex;align-items:flex-start}.price .val sup{font-size:.42em;line-height:1;margin-top:.14em;margin-left:2px;letter-spacing:-.01em}
+.price .vista{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 12px;font-size:15px;font-weight:600}.price .vista i{width:4px;height:4px;border-radius:50%;background:var(--gold-d)}
+.save{color:var(--mauve);font-weight:700;display:inline-flex;align-items:center;gap:6px}
+.ic{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}.save .ic{color:var(--rose)}
+.warn{display:flex;flex-direction:column;align-items:center;gap:16px;width:100%}
+.urg h3{font-family:"Figtree",sans-serif;font-weight:500;font-size:15px;line-height:1.4;color:var(--muted);text-wrap:balance;text-align:center}.ul{white-space:nowrap;font-weight:700;color:#7A1F36}
+@property --a{syntax:"<angle>";inherits:false;initial-value:0deg}
+.urg{position:relative;isolation:isolate;width:100%;max-width:560px;background:#fff;border-radius:22px;padding:22px 28px 20px;display:flex;flex-direction:column;align-items:stretch;gap:16px;color:var(--mauve-d);box-shadow:0 14px 34px rgba(90,20,40,.14)}.urg::before{content:"";position:absolute;inset:-2px;border-radius:24px;z-index:-1;background:conic-gradient(from var(--a),#5A1428 0deg,#fff 70deg,#9C3A55 150deg,#fff 230deg,#5A1428 360deg);animation:rot 5s linear infinite}.urg::after{content:"";position:absolute;inset:0;border-radius:22px;z-index:-1;background:#fff}@keyframes rot{to{--a:360deg}}.tm{display:flex;flex-direction:column;align-items:center;gap:10px}
+.urg small{display:flex;align-items:center;gap:8px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:11px;color:#7A1F36}.urg small::before{content:"";width:7px;height:7px;border-radius:50%;background:#7A1F36;box-shadow:0 0 0 0 rgba(122,31,54,.5);animation:live 1.6s ease-out infinite}@keyframes live{to{box-shadow:0 0 0 8px rgba(122,31,54,0)}}.urg small .ic{display:none}
+.meter{grid-column:1/-1;height:5px;border-radius:9px;background:var(--blush-2);overflow:hidden}
+.meter i{display:block;height:100%;width:100%;background:linear-gradient(90deg,#5A1428,#9C3A55);border-radius:inherit;transition:width 1s linear,background .4s}.urg.hurry .meter i{background:#7A1F36}
+.clock{display:flex;align-items:flex-start;gap:8px;font-variant-numeric:tabular-nums}.clock>em{font-style:normal;font-family:"Serotiva",serif;font-size:36px;line-height:1.4;color:#9C3A55;opacity:.6}
+.clock>span{display:flex;flex-direction:column;align-items:center;gap:8px}.clock b{display:flex;gap:4px}.dg{display:grid;place-items:center;width:.82em;height:1.12em;border-radius:10px;background:#F8EEF0;box-shadow:inset 0 0 0 1px rgba(90,20,40,.08);font-family:"Serotiva",serif;font-weight:500;font-size:46px;line-height:1;color:#5A1428;font-variant-numeric:tabular-nums}.dg.tk{animation:tk .35s ease}.clock>span>i{font-style:normal;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);opacity:.7}
+.clock .tk{animation:tk .35s ease}
+@keyframes tk{from{transform:translateY(-4px);opacity:.3}}
+#stk{display:inline-block}#stk.drop{animation:drop .6s ease}
+@keyframes drop{0%{transform:translateY(-10px);opacity:0}60%{transform:translateY(2px)}}
+.ctas{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:-10px;width:100%;max-width:560px}
+.yes{position:relative;overflow:hidden;width:100%;border:0;cursor:pointer;font:inherit;font-weight:700;font-size:16px;letter-spacing:.03em;text-transform:uppercase;min-height:64px;padding:8px 8px 8px 32px;border-radius:999px;background:var(--mauve);color:#fff;box-shadow:0 12px 28px rgba(92,61,67,.35);transition:transform .2s,background .2s,box-shadow .2s;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.yes:hover{background:var(--mauve-d);transform:translateY(-2px);box-shadow:0 16px 34px rgba(92,61,67,.42)}
+.yes:active{transform:scale(.98)}
+.yes::before{content:"";position:absolute;top:0;bottom:0;width:40%;left:-60%;background:linear-gradient(100deg,transparent,rgba(228,201,162,.55),transparent);transform:skewX(-20deg);animation:shine 4s ease-in-out 2.2s infinite}
+@keyframes shine{0%{left:-60%}30%,100%{left:130%}}
+.yes .lb{flex:1;text-align:center}.yes .arr{width:48px;height:48px;border-radius:50%;background:var(--gold);color:var(--mauve-d);display:grid;place-items:center;flex:none;transition:transform .25s}.yes .arr svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.yes:hover .arr{transform:translateX(3px)}.yes.done,.yes:disabled{justify-content:center;padding:8px 24px}
+.safe{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--muted);letter-spacing:.02em}.safe .ic{width:14px;height:14px}
+.yes.hurry{animation:pulse 1.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 12px 28px rgba(92,61,67,.35),0 0 0 0 rgba(165,112,125,.5)}50%{box-shadow:0 12px 28px rgba(92,61,67,.35),0 0 0 12px rgba(165,112,125,0)}}
+.yes .ld{width:18px;height:18px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite}
+.yes.done{background:var(--gold);color:var(--mauve-d)}.yes.done::before{display:none}
+.yes .ok{width:24px;height:24px;stroke-width:2;animation:pop .5s cubic-bezier(.3,1.6,.5,1)}
+@keyframes pop{from{transform:scale(0) rotate(-90deg)}}
+.no{background:none;border:0;cursor:pointer;font:inherit;font-size:14px;font-weight:600;color:var(--muted);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--blush);padding:6px}.no:hover{color:var(--mauve);text-decoration-color:var(--rose)}
+.row{display:flex;justify-content:center;align-items:center;margin:8px 0;padding:10px 0}
+.row img{width:clamp(88px,13vw,128px);aspect-ratio:3/4;object-fit:cover;border-radius:14px;border:4px solid #fff;margin:0 -12px;box-shadow:0 10px 24px rgba(62,42,46,.15);transition:transform .45s cubic-bezier(.2,.7,.2,1),margin .45s cubic-bezier(.2,.7,.2,1)}
+.row img:nth-child(1){transform:rotate(-7deg)}.row img:nth-child(2){transform:rotate(3deg) translateY(-8px);z-index:1}.row img:nth-child(3){transform:rotate(-2deg);z-index:2}.row img:nth-child(4){transform:rotate(4deg) translateY(-6px);z-index:1}.row img:nth-child(5){transform:rotate(-5deg)}
+@media (hover:hover){.row:hover img{margin:0 6px}.row img:hover{transform:rotate(0) translateY(-10px) scale(1.06);z-index:3}}
+.row.deal img{opacity:0;translate:0 30px;scale:.9;transition:opacity .5s ease,translate .6s cubic-bezier(.2,.8,.2,1.2),scale .6s cubic-bezier(.2,.8,.2,1.2),transform .45s cubic-bezier(.2,.7,.2,1),margin .45s cubic-bezier(.2,.7,.2,1)}.row.deal.in img{opacity:1;translate:0 0;scale:1}.row.float img{animation:bob 5s ease-in-out infinite}.row.float img:nth-child(2){animation-delay:-1.2s}.row.float img:nth-child(3){animation-delay:-2.4s}.row.float img:nth-child(4){animation-delay:-3.1s}.row.float img:nth-child(5){animation-delay:-3.8s}@keyframes bob{50%{translate:0 -6px}}.row.deal img:nth-child(2){transition-delay:.08s}.row.deal img:nth-child(3){transition-delay:.16s}.row.deal img:nth-child(4){transition-delay:.24s}.row.deal img:nth-child(5){transition-delay:.32s}
+.fine{font-size:13px;color:var(--muted);max-width:460px}
+.logo{height:22px;opacity:.9;filter:brightness(0) invert(1);margin:0 auto 48px;display:block}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease var(--d,0s),transform .7s cubic-bezier(.2,.7,.2,1) var(--d,0s)}
+.go .rv{opacity:1;transform:none}
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:5;background:var(--paper);border-radius:999px;padding:8px 8px 8px 20px;display:none;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 12px 36px rgba(30,15,20,.35);transform:translateY(140%);transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.sticky.on{transform:none}
+.sticky b{font-family:"Serotiva",serif;font-size:24px;color:var(--mauve);font-weight:500;line-height:1}.sticky small{display:block;font-size:12px;color:var(--muted);font-weight:600}
+.sticky button{border:0;background:var(--mauve);color:#fff;font:inherit;font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:14px 20px;border-radius:999px;cursor:pointer}
+@media (max-width:640px){.head{padding:36px 18px 28px}.card{width:100%;border-radius:28px 28px 0 0;margin-bottom:0;padding-top:36px;box-shadow:none}.urg{padding:18px 18px 16px}.dg{font-size:38px}.yes{font-size:14px;padding-left:20px}.yes .arr{width:44px;height:44px}.row img{width:27vw;margin:0 -10px}.row img:nth-child(4),.row img:nth-child(5){display:none}.bar{font-size:12px}.stamp{width:100px;height:100px}.stamp big{font-size:27px}.stamp text{font-size:8.8px}.sticky{display:flex}.logo{margin-top:32px;margin-bottom:96px}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.stamp{transform:none}.price s::after{transform:scaleX(1)}}
+</style>
+</head>
+<body>
+<div class="tex" id="tex"></div>
+<div class="bar"><span class="spin"></span>Sua compra está sendo processada!</div>
+<header class="head"><h1 class="rv"><em>Não feche esta página!</em>Oferta única disponível somente agora</h1></header>
+<main class="card" data-screen-label="Upsell">
+
+<h2 class="rv" style="--d:.15s">Leve +1 Sérum <span class="hl">Clareador Noturno</span> com 30% OFF + Nécessaire Eclave grátis!</h2>
+<p class="sub rv" style="--d:.25s">Oferta válida somente nesta página</p>
+<div class="hero rv" style="--d:.35s"><img src="assets/img/kit-caixas.jpg" alt="Sérum Clareador Noturno Eclave com nécessaire"><div class="stamp"><svg class="ring" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="cp" d="M60,60 m-47,0 a47,47 0 1,1 94,0 a47,47 0 1,1 -94,0"></path></defs><text><textPath href="#cp" textLength="290">OFERTA ÚNICA · SOMENTE AGORA · </textPath></text></svg><div class="core"><big>30<sup>%</sup></big><span>OFF</span></div></div></div>
+<div class="price rv" style="--d:.6s">
+<p class="de">De <s>R$ 189,90</s> por apenas:</p>
+<p class="val"><span class="pre"><small>12x de</small><small>R$</small></span><b><span id="pv">11</span><sup id="pc">,08</sup></b></p>
+<p class="vista"><span>ou R$ 132,90 à vista</span><i></i><span class="save"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12V4a1 1 0 0 1 1-1h8l9 9-9 9z"></path><circle cx="8" cy="8" r="1.6"></circle></svg>Você economiza R$ 57,00</span></p>
+</div>
+<div class="warn rv" style="--d:.8s">
+<div class="urg" id="urg"><div class="tm"><small><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"></circle><path d="M12 9v4l2.5 2.5M9 2h6"></path></svg>A oferta encerra em</small><div class="clock"><span><b class="fp" id="mm"></b><i>min</i></span><em>:</em><span><b class="fp" id="ss"></b><i>seg</i></span></div></div><div class="meter"><i id="meter"></i></div><h3>Atenção: restam <span class="ul">apenas <span id="stk">9</span> unidades</span> nesta condição</h3></div>
+</div>
+<div class="ctas rv" style="--d:.95s">
+<button class="yes" id="yes"><span class="lb">Sim, quero 30% off + brinde</span><span class="arr"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></button>
+<p class="safe"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg>Compra segura · 1 clique</p>
+<button class="no" id="no">Não quero o desconto</button>
+</div>
+<div class="row deal" id="row">
+<img src="assets/img/cliente-caixa.jpg" alt="">
+<img src="assets/img/serum-rosto.jpg" alt="">
+<img src="assets/img/hero-sorriso.jpg" alt="">
+<img src="assets/img/modelo-maos.jpg" alt="">
+<img src="assets/img/aplicando.jpg" alt="">
+</div>
+<p class="fine">Após a finalização, o sérum e a nécessaire serão adicionados ao seu pedido principal e você receberá tudo no mesmo envio, com frete grátis.</p>
+</main>
+<img class="logo" src="assets/eclave-wordmark.png" alt="Eclave">
+<div class="sticky" id="sticky"><div><b>12x 11,08</b><small>ou R$ 132,90 à vista</small></div><button id="yes2">Quero 30% off</button></div>
+<script>
+const $=id=>document.getElementById(id);
+const RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+// logo texture tile
+const im=new Image();im.onload=()=>{const c=document.createElement('canvas'),S=360;c.width=c.height=S;const x=c.getContext('2d'),w=96,h=w*766/1200;
+[[S/4,S/4],[S*3/4,S*3/4]].forEach(([cx,cy])=>x.drawImage(im,cx-w/2,cy-h/2,w,h));
+const t=document.createElement('canvas');t.width=t.height=S;const y=t.getContext('2d');y.drawImage(c,0,0);y.globalCompositeOperation='source-in';y.fillStyle='#E4C9A2';y.fillRect(0,0,S,S);
+$('tex').style.backgroundImage=`url(${t.toDataURL()})`};im.src='assets/eclave-simbolo.png';
+// staged entrance
+requestAnimationFrame(()=>requestAnimationFrame(()=>document.body.classList.add('go')));
+// price count-up
+if(!RM){const el=$('pv'),pc=$('pc'),T=11.08;setTimeout(()=>{const t0=performance.now();const f=n=>{const p=Math.min(1,(n-t0)/900),e=1-Math.pow(1-p,3);const v=(T*e).toFixed(2).split('.');el.textContent=v[0];pc.textContent=','+v[1];if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f)},650)}
+// timer + meter
+const K='eclave-upsell-end',DUR=600000;let end=+localStorage.getItem(K);if(!end||end<Date.now()){end=Date.now()+DUR;localStorage.setItem(K,end)}
+let stock=9;
+const FD=[$('mm'),$('mm'),$('ss'),$('ss')].map(p=>{const d=document.createElement('span');d.className='dg';p.appendChild(d);return d});
+function setF(str){[...str].forEach((v,i)=>{const d=FD[i];if(d.textContent===v)return;d.textContent=v;if(RM)return;d.classList.remove('tk');void d.offsetWidth;d.classList.add('tk')})}
+let lastS=null;const tick=()=>{if(end<=Date.now()){end=Date.now()+DUR;localStorage.setItem(K,end)}const s=Math.max(0,Math.round((end-Date.now())/1000));const m=String(s/60|0).padStart(2,'0'),sec=String(s%60).padStart(2,'0');
+setF(m+sec);
+$('meter').style.width=(s/(DUR/1000)*100)+'%';$('yes').classList.toggle('hurry',s>0&&s<60&&!$('yes').disabled);$('urg').classList.toggle('hurry',s<60)};tick();setInterval(tick,1000);
+// stock drops once
+setTimeout(()=>{if(stock>1){stock--;$('stk').textContent=stock;$('stk').classList.add('drop')}},14000);
+// accept
+const accept=()=>{const b=$('yes');if(b.disabled)return;b.disabled=true;b.classList.remove('hurry');b.innerHTML='<span class="ld"></span>Processando';
+setTimeout(()=>{b.classList.add('done');b.innerHTML='<svg class="ic ok" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="m7.5 12.5 3 3 6-6.5"></path></svg>Adicionado ao seu pedido';$('no').remove();document.querySelector('.safe')?.remove();setTimeout(()=>location.href='obrigado.html',1400);$('sticky').classList.remove('on');$('sticky').style.display='none'},1100)};
+$('yes').onclick=accept;$('yes2').onclick=()=>{window.scrollTo({top:$('yes').getBoundingClientRect().top+scrollY-200,behavior:'smooth'});accept()};
+$('no').onclick=()=>{setTimeout(()=>location.href='obrigado.html',1200);document.querySelector('.ctas').innerHTML='<p class="fine">Tudo certo! Seu pedido original foi confirmado.</p>';$('sticky').style.display='none'};
+// photos: deal in on scroll, then gentle float
+const row=$('row');new IntersectionObserver(([e],o)=>{if(e.isIntersecting){row.classList.add('in');o.disconnect();if(!RM)setTimeout(()=>row.classList.add('float'),1100)}},{threshold:.35}).observe(row);
+// sticky mobile
+new IntersectionObserver(([e])=>$('sticky').classList.toggle('on',!e.isIntersecting&&e.boundingClientRect.top<0&&!$('yes').disabled)).observe($('yes'));
+</script>
+</body>
+</html>

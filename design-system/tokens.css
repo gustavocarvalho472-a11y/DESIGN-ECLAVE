@@ -1,0 +1,29 @@
+/* Eclave Design System — tokens extraídos das páginas aprovadas */
+@font-face{font-family:"Serotiva";src:url("../assets/Serotiva-VF.ttf") format("truetype");font-weight:100 900;font-display:swap}
+/* Figtree: Google Fonts, pesos 400–800 */
+:root{
+/* Neutros quentes */
+--cream:#F6E3CB;--cream-2:#FBF1E4;--paper:#FFFAF4;
+/* Mauve (cor principal da marca) */
+--mauve:#7A5359;--mauve-d:#5C3D43;--rose:#A5707D;
+/* Blush (fundos suaves) */
+--blush:#F3C9CC;--blush-2:#FBE4E3;
+/* Dourado (destaques, selos, setas do CTA) */
+--gold:#E4C9A2;--gold-d:#C9A676;
+/* Texto */
+--ink:#3E2A2E;--muted:#6E5358;
+/* Vinho (urgência / timer — uso restrito) */
+--wine:#5A1428;--wine-m:#7A1F36;--wine-2:#9C3A55;--wine-bg:#F8EEF0;
+/* Forma */
+--r-sm:10px;--r-md:14px;--r:22px;--r-lg:28px;--r-xl:32px;--r-pill:999px;
+/* Sombras */
+--sh-card:0 40px 80px rgba(30,15,20,.35);
+--sh-btn:0 12px 28px rgba(92,61,67,.35);
+--sh-photo:0 10px 24px rgba(62,42,46,.15);
+/* Tipografia */
+--f-display:"Serotiva",Georgia,serif;  /* títulos, preços, números; peso 500–650; letter-spacing -.01em */
+--f-body:"Figtree",system-ui,sans-serif; /* corpo 15–16px; labels 11–14px, 700–800, caixa alta, tracking .08–.16em */
+/* Movimento */
+--ease-out:cubic-bezier(.2,.7,.2,1);
+--ease-pop:cubic-bezier(.3,1.6,.5,1);
+}
