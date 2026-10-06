@@ -96,14 +96,25 @@ Breakpoint principal: abaixo de 1180px, o texto do banner vai para baixo da imag
   - Leque de 5 fotos (3 no mobile): entram uma a uma ao aparecer na tela e depois flutuam 6px em ciclo de 5s. No desktop, abrem em leque no hover.
 - **Mobile:** barra fixa com o CTA quando o botão principal sai da tela.
 
-### 3. Obrigado (`obrigado.html`)
-1. **Confirmação:** fundo `--blush-2`, logo, ✓ desenhado com stroke-dashoffset, h1, 2 parágrafos e CTA “Indique & ganhe”, que rola até `#indique`.
-2. **Fotos:** leque igual ao do upsell, com o wordmark gigante a 12% atrás.
-3. **Indique e ganhe:** card em forma de janela (barra de 3 pontos `--wine`).
-   - À esquerda, em fundo `--mauve-d`: h2, o cupom tracejado com botão Copiar (clipboard) e o texto.
-   - À direita: a foto com 3 pílulas de faixa (1/5/10 indicações), que entram em sequência.
-4. **Comunidade:** fundo `--mauve-d` com textura, h2 com `#RitualEclave` em dourado, CTA claro e marquee dourado inclinado.
-5. **Footer:** foto desfocada ao fundo, card translúcido com blur, 4 colunas (logo, redes, contatos, botões) e wordmark gigante.
+### 3. Obrigado (`obrigado.html`) — atualizado
+1. **Confirmação** (fundo `--blush-2`, sem textura)
+   - Logo vertical símbolo+ECLAVE mauve (`assets/eclave-logo-vertical-mauve.png`, h 64px, margin-bottom 22px).
+   - Ícone de sucesso 64px: gradiente azul bebê `#B9DDF7 → #7FBCEB`, ✓ branco desenhado (stroke-dashoffset, .6s), halo `rgba(143,197,238,.22)` 8px. Dois anéis 1.5px `rgba(127,188,235,.55)` expandem scale .85→1.45 e somem (2.8s, defasados 1.4s).
+   - h1 Serotiva clamp(38–64px) `--mauve-d`; 2 parágrafos `--muted`.
+   - CTA “Indique & ganhe” (pill mauve, seta em círculo dourado apontando para baixo): brilho dourado varrendo a cada 3.6s, anel de pulso 14px a cada 2.4s, seta oscilando 3px. Rola até `#indique`.
+2. **Fotos** — leque de 5 (3 no mobile) com entrada escalonada + flutuação 6px/5s; wordmark gigante atrás a opacity .32.
+3. **Indique e ganhe — tela de MacBook (só a tela, sem teclado)**
+   - Moldura: `.win` radius 16px, overflow hidden, bg #2B2B2E; anéis por box-shadow: 1px rgba(0,0,0,.6), 9px #1C1C1E, 1px #48484C.
+   - Barra: gradiente #3A3A3D→#2E2E31, semáforo 12px (#FF5F57 / #FEBC2E / #28C840), pílula de URL central #1F1F21 com cadeado “eclave.com.br/indique” (oculta no mobile).
+   - Corpo: foto ocupa a janela inteira; painel de **vidro** à esquerda (grid 6fr/6fr): bg linear-gradient(140deg, rgba(255,255,255,.22), rgba(255,255,255,.06)), backdrop-filter blur(24px) saturate(1.6), borda 1px rgba(255,255,255,.35), highlight interno no topo, radius 22px, margin 22px.
+   - Cupom: borda tracejada creme, fundo rgba(62,42,46,.4), código em `--paper` clamp(16–22px), botão Copiar dourado (clipboard + estado “Copiado”), quebra de linha se faltar espaço.
+   - 3 pílulas de faixa (1/5/10) à direita, entram em sequência ao rolar.
+4. **Comunidade** — fundo `--mauve-d` liso, h2 com #RitualEclave dourado, CTA claro, marquee dourado **reto** (sem rotação).
+5. **Footer — vidro estilo Apple**
+   - Foto de fundo opacity .55 + overlay mauve em gradiente vertical.
+   - Card: radius 30px; bg linear-gradient(160deg, rgba(255,244,236,.20), rgba(255,236,226,.07) 55%, rgba(255,244,236,.12)); backdrop-filter blur(40px) saturate(1.8) brightness(1.05); borda especular via ::before com mask (gradiente branco forte nos cantos sup-esq e inf-dir); brilho radial no canto sup-esq via ::after; inner highlights + sombra externa suave.
+   - 4 colunas separadas por divisores 1px rgba(255,255,255,.12): logo vertical branco (`eclave-logo-vertical-white.png`, h 52px) + CNPJ, Redes, Contatos, botões (Ver Instagram creme / Voltar à loja dourado).
+   - Responsivo: 2 colunas ≤820px, 1 coluna ≤640px (divisores viram horizontais).
 
 ## Interactions & Behavior
 - **Entrada:** `.rv` com opacity e translateY de 18px → 0 em .7s `--ease-out`, escalonada via `--d`.
@@ -139,7 +150,8 @@ Veja `design-system/tokens.css`. Resumo:
 - **Raios:** 10 / 14 / 22 / 28 / 32 / pill.
 
 ### Regras de marca
-- O símbolo da Eclave entra **só como textura de fundo sutil** (6–12%). Não repetir o logo em selos, ícones e botões.
+- Não repetir o símbolo em selos, ícones e botões. Na página Obrigado não há textura de fundo; logo principal = versão vertical símbolo+ECLAVE.
+- Cor de sucesso: azul bebê `#B9DDF7`/`#7FBCEB` (uso exclusivo do ícone de confirmação).
 - Ícones são de linha: stroke 1,8–2, cantos arredondados, 14–18px. Usar poucos e com função.
 - Botões principais são pílulas mauve com a seta em círculo dourado. A recusa é sempre um link de texto.
 
