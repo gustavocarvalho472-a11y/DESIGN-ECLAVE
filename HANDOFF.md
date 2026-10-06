@@ -32,69 +32,45 @@ Notas:
 - Adicionar `<meta name="description">`, Open Graph e favicon (`assets/eclave-simbolo.png`) antes de divulgar.
 
 ## Fluxo entre páginas (já ligado nesta pasta)
-- `index.html` → botão `#buy` (“Quero meu clareador”) anima o produto voando até o carrinho e, após 1,3s, vai para `upsell.html`.
-- `upsell.html`:
-  - “Sim” mostra o estado de processando, depois o ✓, e após 1,4s vai para `obrigado.html`;
-  - “Não quero o desconto” vai para `obrigado.html` após 1,2s.
-- `obrigado.html` → “Voltar à loja” vai para `index.html`.
-
-Em produção, trocar esses redirecionamentos pelas chamadas do checkout (ex.: Yampi, Cartpanda, Shopify), mantendo os estados visuais.
+- `index.html` → #buy (produto voa ao carrinho) → 1,3s → `upsell.html`
+- `upsell.html` → "Sim" (loading → ✓) → 1,4s → `obrigado.html`; "Não quero o desconto" → 1,2s → `obrigado.html`
+- `obrigado.html` → "Voltar à loja" → `index.html`
+Em produção, troque os redirects pelo checkout real mantendo os estados visuais.
 
 ## Screens
 
-### 1. Landing (`index.html`)
-Seções em ordem (cada uma tem `data-screen-label`):
-1. Topbar com marquee.
-2. Header, que encolhe ao rolar, e barra de progresso no topo.
-3. Banner.
-4. Produto, com:
-   - galeria de 4 imagens com miniaturas;
-   - kits 1/2/3 (`.bundle[data-q]`);
-   - estoque e preço.
-5. Faixa marquee inclinada.
-6. Problema.
-7. Quiz de 3 perguntas, que gera um plano de 30/60/90 dias salvo em localStorage.
-8. Benefícios.
-9. Ativos: Retinaldeído, Centella, Copper Peptide.
-10. Resultados: antes/depois com slider arrastável (`--p`).
-11. Como usar: 3 passos.
-12. Comparativo.
-13. Depoimentos.
-14. FAQ.
-15. CTA final.
-16. Footer.
+### 1. Landing (`index.html`) — atualizado
+Seções (cada uma com `data-screen-label`): Header (encolhe no scroll) + barra de progresso → Banner → Produto → Faixa marquee → Problema → Quiz (3 perguntas → plano 30/60/90 dias em localStorage) → Benefícios → Ativos → Antes/depois (slider) → Como usar → Comparativo → Depoimentos → FAQ → CTA final → Footer. Toast de prova social + barra fixa de compra no mobile.
+**Não há mais faixa animada no topo** (topbar removida).
 
-Elementos flutuantes: toast de prova social e barra fixa de compra no mobile.
+**Banner**
+- Desktop: foto `hero-sorriso.jpg` deslocada à esquerda (width 118%, left -20%) para o rosto ficar na metade esquerda; texto estreito à direita (max-width min(420px,30vw)) sobre degradê creme lateral.
+- ≤1180px (mobile/tablet): **só foto + texto, sem botão**. Banner compacto `aspect-ratio:4/3`, max-height 64svh, para os produtos aparecerem no 1º scroll. Foto `object-fit:cover; object-position:0% 30%` → fundo bege à esquerda, rosto à direita. Sem overlay sobre a modelo. Texto alinhado à esquerda embaixo, max-width ~42–44%, h1 clamp(28px,7.6vw,46px).
 
-Breakpoint principal: abaixo de 1180px, o texto do banner vai para baixo da imagem.
+**Produto**
+- Galeria: 1ª imagem = `serum-rosto.jpg` (modelo segurando o frasco); depois textura, mão/rosa, caixa.
+- Mobile: `.info` é flex-column e usa `order` — botão de compra + linha de pagamento sobem; **pílulas de ativos e timer ficam abaixo do CTA**; selos de confiança por último.
 
-### 2. Upsell (`upsell.html`)
-- **Fundo:** `--mauve-d` com textura do símbolo, gerada em canvas, em opacidade .09 e com drift de 80s.
-- **Faixa do topo:** fundo `--ink`, spinner dourado e o texto “Sua compra está sendo processada!”.
-- **Header:** h1 em Serotiva clamp(30–52px), com a 1ª linha em `--gold`.
-- **Card:** max-width 880px, fundo `--blush-2`, raio 32px. A borda é dupla, feita com box-shadow: 1px `--gold-d` + 8px blush + 1px dourado translúcido.
-- **Conteúdo do card:**
-  - h2 com o destaque `.hl` (fundo `--rose`, texto branco).
-  - Foto 16:9 com um selo de 124px:
-    - anel dourado com o texto circular girando a cada 22s;
-    - núcleo `--mauve-d` com “30%” em Serotiva 600.
-  - Preço:
-    - “12x de” e “R$” empilhados à esquerda;
-    - número em Serotiva 650, clamp(84–120px), com os centavos em `<sup>` a .42em;
-    - o preço antigo é riscado por uma linha animada.
-  - **Timer:**
-    - caixa branca com borda em conic-gradient vinho/branco girando a cada 5s;
-    - ponto vinho “ao vivo” pulsando;
-    - dígitos em caixas `#F8EEF0` com Serotiva 46px em `--wine`;
-    - barra de tempo em degradê vinho, sincronizada com o timer;
-    - texto de estoque abaixo.
-  - **CTA:**
-    - pill de 64px de altura, `--mauve`, com uma seta num círculo dourado de 48px;
-    - brilho dourado atravessando a cada 4s;
-    - pulsa quando faltam menos de 60s;
-    - linha “Compra segura · 1 clique” e o link de recusa abaixo.
-  - Leque de 5 fotos (3 no mobile): entram uma a uma ao aparecer na tela e depois flutuam 6px em ciclo de 5s. No desktop, abrem em leque no hover.
-- **Mobile:** barra fixa com o CTA quando o botão principal sai da tela.
+**CTA (`.btn`)**
+- Figtree 700, caixa alta, letter-spacing .04em, 15px (#buy 16px, min-height 64px).
+- Brilho dourado atravessando todos os botões a cada 4s (::before).
+- #buy pulsa (scale 1.025 + onda 16px) a cada 2s; pausa no hover/clique.
+
+**Faixa marquee abaixo dos produtos:** reta (sem rotação).
+
+**Footer:** mesmo vidro Apple da página Obrigado (ver item 3.5): foto `caixa-frasco.jpg` ao fundo + overlay mauve; card de vidro com 5 colunas — logo vertical branco + frase + CNPJ/endereço + selos de pagamento (PIX/VISA/MASTER/ELO/BOLETO), Ajuda, Redes, Contatos (+ horário), botões Ver Instagram / Comprar agora; linha de copyright + "Compra 100% segura"; wordmark gigante. 2 colunas ≤980px, 1 coluna ≤600px.
+
+### 2. Upsell (`upsell.html`) — atualizado
+- **Fundo preto** `#0D0B0C` com textura do símbolo em cinza (#8C8C8C) a opacity .06 — quase imperceptível.
+- **Faixa do topo vermelha**: linear-gradient(90deg,#9E0F1C,#C8162A,#9E0F1C), texto e spinner **champanhe #F7D9A6**, sombra vermelha suave.
+- **Logo no topo** (não no rodapé): `eclave-logo-vertical-white.png`, h 56px (46px mobile).
+- h1 Serotiva clamp(30–52px) branco, 1ª linha em `--gold`.
+- Card `--blush-2`, radius 32px, borda dupla dourada; selo 30% OFF com anel de texto girando; preço "12x de / R$" empilhado + número Serotiva 650 com centavos em sup.
+- **Timer**: caixa branca com borda conic-gradient vinho/branco girando (5s); ponto vinho pulsando; **dígitos brancos em caixas vinho** (gradiente #6A1A31→#5A1428), Serotiva 46px; barra de tempo vinho sincronizada.
+- **Box de atenção**: texto em CAIXA ALTA 800 13px, fundo #F8EEF0, borda 1.5px #7A1F36, ícone de alerta piscando; "apenas N unidades" em pílula vinho com texto branco.
+- **CTA**: margin-top 14px do box; pill 64px com seta em círculo dourado; brilho a cada 4s + **batida** (scale 1.035 + onda 18px, 1.8s); pausa no hover; "Compra segura · 1 clique" e link de recusa abaixo.
+- Leque de fotos com entrada escalonada + flutuação suave; barra fixa no mobile.
+- **Tweaks** (só no editor; `tweaks-panel.jsx` + React podem ser removidos em produção): Fundo (Noite/Vinho/Mauve), Urgência (Calma/Equilibrada/Máxima), Acento do CTA (Mauve/Vinho/Ouro). Valores escolhidos: Noite / Equilibrada / Vinho — aplicados via `data-*` no `<html>`; em produção, fixe as classes equivalentes.
 
 ### 3. Obrigado (`obrigado.html`) — atualizado
 1. **Confirmação** (fundo `--blush-2`, sem textura)
@@ -143,7 +119,7 @@ Veja `design-system/tokens.css`. Resumo:
 - **Fundos:** Cream `#F6E3CB` / `#FBF1E4` / `#FFFAF4`, Blush `#F3C9CC` / `#FBE4E3`.
 - **Destaque:** Gold `#E4C9A2` / `#C9A676`.
 - **Texto:** Ink `#3E2A2E`, Muted `#6E5358`.
-- **Urgência:** Vinho `#5A1428` / `#7A1F36` / `#9C3A55`, fundo `#F8EEF0`. Uso restrito ao timer; nunca usar laranja.
+- **Urgência (upsell):** faixa vermelha #9E0F1C/#C8162A com texto champanhe #F7D9A6. Vinho `#5A1428` / `#7A1F36` / `#9C3A55`, fundo `#F8EEF0`. Uso restrito ao timer; nunca usar laranja.
 - **Fontes:**
   - Serotiva (variável, `assets/Serotiva-VF.ttf`): títulos e números.
   - Figtree (Google Fonts): corpo e labels.
