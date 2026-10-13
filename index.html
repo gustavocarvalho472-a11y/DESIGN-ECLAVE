@@ -100,7 +100,7 @@ header{position:sticky;top:0;z-index:30;padding:14px 0;background:color-mix(in o
 .pill{background:#fff;border-radius:999px;padding:8px 14px;font-size:14px;font-weight:600;color:var(--mauve);display:flex;gap:8px;align-items:center}
 .pill i{width:8px;height:8px;border-radius:50%;background:var(--rose)}
 .timer{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--mauve);color:#fff;border-radius:18px;padding:14px 20px;font-weight:600}
-.timer .t{display:flex;gap:6px}
+.timer .tl{display:inline-flex;align-items:center;gap:8px}.timer .t{display:flex;gap:6px}
 .timer .t span{background:var(--cream);color:var(--mauve);border-radius:10px;min-width:48px;padding:6px 0;text-align:center;font-weight:800;font-size:20px;font-variant-numeric:tabular-nums}
 .bundles{display:flex;flex-direction:column;gap:12px}
 .bundle{position:relative;display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:16px;align-items:center;background:#fff;border:2px solid #fff;border-radius:20px;padding:18px 20px;cursor:pointer;transition:border-color .15s,transform .15s}
@@ -342,8 +342,28 @@ body.st-on .toast{bottom:92px}
 .problem-grid,.ing-grid,.results,.steps,.ba{grid-template-columns:minmax(0,1fr)}
 .trust{grid-template-columns:repeat(3,minmax(0,1fr))}
 .cmp th,.cmp td{padding:14px 10px;font-size:14px}
-.timer{flex-direction:column;align-items:flex-start}.q-opts{grid-template-columns:minmax(0,1fr)}.toast{display:none}
-#buy~*{order:3}.info .pills{order:2}.info .timer{order:2}#buy{order:1}#buy~.pay{order:1}
+.q-opts{grid-template-columns:minmax(0,1fr)}.toast{display:none}
+#buy~*{order:3}.info .pills{order:2}#buy{order:1}#buy~.pay{order:1}
+.info{gap:18px}
+/* timer compacto, acima dos kits */
+.info .timer{order:0;padding:10px 10px 10px 14px;gap:10px;border-radius:16px;font-size:14px;line-height:1.2}
+.timer .tl{flex:1;min-width:0;gap:6px;font-size:13px;white-space:nowrap}.timer .tl svg{flex:none;width:16px;height:16px}
+.timer .t{gap:10px}.timer .t span{position:relative;min-width:40px;font-size:18px;padding:6px 0}
+.timer .t span+span::before{content:":";position:absolute;left:-8px;top:50%;translate:0 -55%;color:var(--cream);font-weight:800}
+/* kits */
+.bundle{grid-template-columns:22px minmax(0,1fr) auto;gap:12px;padding:16px 14px}
+.bundle .dot{width:22px;height:22px}.bundle h4{font-size:16px}.bundle small{font-size:13px;line-height:1.35;display:block}
+.bundle .pr b{font-size:18px;white-space:nowrap}.bundle .pr s{font-size:13px}.bundle .tag{right:14px;font-size:11px}
+/* CTA: rótulo e preço em duas linhas */
+#buy{flex-direction:column;gap:2px;padding:14px 20px;font-size:16px;line-height:1.15}
+#buy .sep{display:none}#buy #buyP{font-size:14px;font-weight:600;opacity:.85;letter-spacing:.02em}
+/* barra fixa */
+.sticky{gap:10px;padding:6px 6px 6px 8px;bottom:12px}.sticky .th{width:42px;height:42px}
+.sticky .tx b{font-size:14px}.sticky .tx span{font-size:13px;white-space:nowrap}
+.sticky .btn{padding:12px 18px;font-size:14px}
+@media (max-width:360px){.timer .tl{white-space:normal}.timer .tl svg{display:none}}
+/* banner: texto não invade o rosto */
+.banner h1{font-size:clamp(23px,6.4vw,46px)}
 }
 </style>
 </head>
@@ -374,7 +394,7 @@ body.st-on .toast{bottom:92px}
 <h2 class="serif" style="font-size:clamp(38px,4.4vw,58px);line-height:1.02;color:var(--mauve)">Sérum Clareador <em style="color:var(--rose)">Noturno</em> Eclave</h2>
 <p class="lede">Clareie, renove e revele uma pele mais radiante. Age enquanto você dorme para uniformizar manchas, melasma e marcas de acne. 30 ml.</p>
 <div class="pills"><span class="pill"><i></i>Retinaldeído</span><span class="pill"><i></i>Centella Asiática</span><span class="pill"><i></i>Copper Peptide</span><span class="pill"><i></i>Dermatologicamente testado</span></div>
-<div class="timer"><span>A oferta termina em</span><div class="t"><span id="hh">00</span><span id="mm">00</span><span id="ss">00</span></div></div>
+<div class="timer"><span class="tl"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="13" r="8"></circle><path d="M12 9v4l2.5 2.5M9 2h6"></path></svg>A oferta termina em</span><div class="t"><span id="hh">00</span><span id="mm">00</span><span id="ss">00</span></div></div>
 <div class="stock"><div class="stock-t">Restam <b id="stockN">27</b> unidades com desconto</div><div class="stock-bar"><i id="stockBar"></i></div></div>
 <div class="bundles" id="bundles">
 <div class="bundle" data-q="1" data-p="129,90" data-o="189,90"><span class="dot"></span><div><h4>1 unidade</h4><small>Tratamento de 30 dias</small></div><div class="pr"><b>R$ 129,90</b><s>R$ 189,90</s></div></div>
@@ -382,7 +402,7 @@ body.st-on .toast{bottom:92px}
 <div class="bundle" data-q="3" data-p="259,80" data-o="569,70"><span class="tag g">Compre 2, leve 3</span><span class="dot"></span><div><h4>3 unidades</h4><small>R$ 86,60 cada · 90 dias</small></div><div class="pr"><b>R$ 259,80</b><s>R$ 569,70</s></div></div>
 </div>
 <div class="plan-note" id="planNote" hidden></div>
-<button class="btn full" id="buy"><span id="buyL">Quero meu clareador</span> · <span id="buyP">R$ 219,80</span></button>
+<button class="btn full" id="buy"><span id="buyL">Quero meu clareador</span><span class="sep"> · </span><span id="buyP">R$ 219,80</span></button>
 <p class="pay">Pix com 5% off · até 6x sem juros no cartão</p>
 <div class="trust">
 <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"></path><circle cx="7" cy="18" r="2"></circle><circle cx="17" cy="18" r="2"></circle></svg>Frete grátis</div>
@@ -559,7 +579,7 @@ document.querySelectorAll('.bundle').forEach(b=>b.addEventListener('click',()=>s
 let n=0;document.getElementById('buy').addEventListener('click',e=>{const b=document.querySelector('.bundle.on');n+=+b.dataset.q;document.getElementById('cartN').textContent=n;const el=e.currentTarget,o=el.innerHTML;el.textContent='Adicionado à sacola ✓';setTimeout(()=>el.innerHTML=o,1400);});
 const KEY='eclave-offer-end';let end=+localStorage.getItem(KEY);if(!end||end<Date.now()){end=Date.now()+ (2*3600+47*60+12)*1000;localStorage.setItem(KEY,end);}
 const pad=v=>String(v).padStart(2,'0');const tick=()=>{let s=Math.max(0,Math.floor((end-Date.now())/1000));hh.textContent=pad(Math.floor(s/3600));mm.textContent=pad(Math.floor(s%3600/60));ss.textContent=pad(s%60);};tick();setInterval(tick,1000);
-const hero=document.getElementById('produto'),st=document.getElementById('sticky');addEventListener('scroll',()=>st.classList.toggle('show',hero.getBoundingClientRect().bottom<0),{passive:true});
+const hero=document.getElementById('produto'),st=document.getElementById('sticky');addEventListener('scroll',()=>st.classList.toggle('show',hero.getBoundingClientRect().bottom<0&&document.querySelector('.final').getBoundingClientRect().top>innerHeight),{passive:true});
 
 /* motion & personalization */
 const RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
