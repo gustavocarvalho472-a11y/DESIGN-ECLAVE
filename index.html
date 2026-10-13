@@ -365,6 +365,60 @@ body.st-on .toast{bottom:92px}
 /* banner: texto não invade o rosto */
 .banner h1{font-size:clamp(23px,6.4vw,46px)}
 }
+
+/* === v-aprovação: Problema === */
+.pcard{position:relative;overflow:hidden;gap:18px}
+.pc-t{display:flex;flex-direction:column;gap:6px}
+.pcard .n{font-family:"Figtree",sans-serif;font-size:12px;font-weight:800;letter-spacing:.16em;color:var(--rose);opacity:.8}
+.sw{position:relative;width:72px;height:72px;border-radius:50%;flex:none;box-shadow:0 0 0 5px rgba(255,255,255,.75),0 10px 22px -8px rgba(122,83,89,.45);
+  background:radial-gradient(circle at 34% 28%,rgba(255,240,228,.9),transparent 42%),radial-gradient(circle at 50% 55%,#EBC6AA,#D9A98A 78%)}
+.sw::after{content:"";position:absolute;inset:0;border-radius:50%;box-shadow:inset 0 -8px 14px rgba(122,83,89,.22)}
+.sw-mel{background:radial-gradient(ellipse 34% 26% at 62% 42%,rgba(128,78,58,.62),transparent 72%),radial-gradient(ellipse 26% 20% at 36% 64%,rgba(128,78,58,.45),transparent 72%),radial-gradient(ellipse 18% 14% at 70% 70%,rgba(128,78,58,.35),transparent 72%),radial-gradient(circle at 34% 28%,rgba(255,240,228,.9),transparent 42%),radial-gradient(circle at 50% 55%,#EBC6AA,#D9A98A 78%)}
+.sw-acne{background:radial-gradient(circle at 30% 42%,rgba(150,72,64,.7) 0 3px,transparent 4.5px),radial-gradient(circle at 58% 30%,rgba(150,72,64,.6) 0 2.5px,transparent 4px),radial-gradient(circle at 66% 58%,rgba(150,72,64,.72) 0 3.5px,transparent 5px),radial-gradient(circle at 42% 70%,rgba(150,72,64,.55) 0 2.5px,transparent 4px),radial-gradient(circle at 76% 40%,rgba(150,72,64,.45) 0 2px,transparent 3.5px),radial-gradient(circle at 34% 28%,rgba(255,240,228,.9),transparent 42%),radial-gradient(circle at 50% 55%,#EBC6AA,#D9A98A 78%)}
+.sw-sol{background:radial-gradient(circle at 28% 34%,rgba(146,92,60,.6) 0 1.6px,transparent 2.4px),radial-gradient(circle at 40% 26%,rgba(146,92,60,.6) 0 1.2px,transparent 2.0px),radial-gradient(circle at 52% 38%,rgba(146,92,60,.6) 0 1.8px,transparent 2.6px),radial-gradient(circle at 63% 30%,rgba(146,92,60,.6) 0 1.3px,transparent 2.1px),radial-gradient(circle at 70% 46%,rgba(146,92,60,.6) 0 1.5px,transparent 2.3px),radial-gradient(circle at 34% 50%,rgba(146,92,60,.6) 0 1.4px,transparent 2.2px),radial-gradient(circle at 46% 56%,rgba(146,92,60,.6) 0 1.9px,transparent 2.7px),radial-gradient(circle at 58% 52%,rgba(146,92,60,.6) 0 1.2px,transparent 2.0px),radial-gradient(circle at 24% 60%,rgba(146,92,60,.6) 0 1.1px,transparent 1.9px),radial-gradient(circle at 66% 62%,rgba(146,92,60,.6) 0 1.6px,transparent 2.4px),radial-gradient(circle at 40% 70%,rgba(146,92,60,.6) 0 1.3px,transparent 2.1px),radial-gradient(circle at 54% 72%,rgba(146,92,60,.6) 0 1.1px,transparent 1.9px),radial-gradient(circle at 76% 36%,rgba(146,92,60,.6) 0 1.0px,transparent 1.8px),radial-gradient(circle at 30% 42%,rgba(146,92,60,.6) 0 1.0px,transparent 1.8px),radial-gradient(circle at 48% 44%,rgba(146,92,60,.6) 0 1.1px,transparent 1.9px),radial-gradient(circle at 34% 28%,rgba(255,240,228,.9),transparent 42%),radial-gradient(circle at 50% 55%,#EBC6AA,#D9A98A 78%)}
+.sw-opa{background:linear-gradient(160deg,rgba(176,156,146,.38),rgba(150,128,118,.3)),radial-gradient(circle at 50% 55%,#E0C0A9,#C9A28A 78%);filter:saturate(.75)}
+.sw-opa::before{content:"";position:absolute;inset:18% 22% 40% 18%;border-radius:50%;background:radial-gradient(rgba(255,255,255,.18),transparent 70%)}
+@media (min-width:641px){.pcard{padding:30px 26px 28px}.pcard .sw{margin-bottom:4px}}
+@media (max-width:640px){
+ .problem-grid{gap:0;background:#fff;border-radius:24px;padding:4px 18px;box-shadow:0 1px 0 rgba(0,0,0,.03),0 24px 50px -34px rgba(122,83,89,.55)}
+ .pcard{flex-direction:row;align-items:center;gap:16px;background:none!important;border-radius:0;padding:18px 0}
+ .pcard+.pcard{border-top:1px solid rgba(122,83,89,.12)}
+ .pcard:hover{transform:none}
+ .pcard .sw{width:58px;height:58px;box-shadow:0 0 0 4px var(--cream-2),0 8px 16px -8px rgba(122,83,89,.45)}
+ .pc-t{gap:3px}.pcard .n{font-size:11px}.pcard h3{font-size:20px}.pcard p{font-size:14px;line-height:1.4}
+}
+/* === v-aprovação: Resultados === */
+.results{gap:0;background:#fff;border-radius:28px;padding:8px;box-shadow:0 1px 0 rgba(0,0,0,.03),0 30px 60px -40px rgba(122,83,89,.6)}
+.res{background:none;border-radius:0;padding:28px 24px;align-items:center;text-align:center;gap:14px}
+.res+.res{border-left:1px solid rgba(122,83,89,.12)}
+.ring{position:relative;width:132px;height:132px;display:grid;place-items:center}
+.ring svg{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:5.5;stroke-linecap:round}
+.ring .tr{stroke:var(--blush-2)}
+.ring .pg{stroke:url(#ringG);stroke-dasharray:calc(var(--v)*1) 100}
+.res .ring b{font-size:44px;letter-spacing:-.02em;display:flex;align-items:flex-start}.res .ring b small{font-size:.42em;margin:.18em 0 0 .06em;font-weight:500;color:var(--rose)}
+.res p{font-size:16px;font-weight:600;color:var(--ink);max-width:22ch;line-height:1.35}
+@media (max-width:640px){
+ .results{padding:4px 18px;border-radius:24px}
+ .res{flex-direction:row;text-align:left;gap:18px;padding:18px 0}
+ .res+.res{border-left:0;border-top:1px solid rgba(122,83,89,.12)}
+ .ring{width:84px;height:84px;flex:none}.ring circle{stroke-width:6.5}
+ .res .ring b{font-size:30px}
+ .res p{font-size:16px;max-width:none}
+}
+
+/* resultados: animação dos anéis */
+.ring .cap{position:absolute;inset:0;transform:rotate(calc(var(--v)*3.6deg));opacity:0;transition:opacity .3s;pointer-events:none}
+.ring.go .cap{opacity:1}
+.ring .cap::after{content:"";position:absolute;left:50%;top:calc(50% - 34/80*100%);width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:#fff;box-shadow:0 0 0 3px var(--gold-d),0 0 14px 4px rgba(228,201,162,.9)}
+.ring::before{content:"";position:absolute;inset:6%;border-radius:50%;pointer-events:none;opacity:0}
+.ring.done::before{animation:ringHalo 2.8s ease-out .2s infinite}
+@keyframes ringHalo{0%{box-shadow:0 0 0 0 rgba(201,166,118,.45);opacity:1}100%{box-shadow:0 0 0 18px rgba(201,166,118,0);opacity:1}}
+.ring.done b{animation:ringPop .5s cubic-bezier(.3,1.6,.5,1)}
+@keyframes ringPop{40%{transform:scale(1.08)}}
+.ring.done .cap::after{animation:capGlow 2.8s ease-in-out infinite}
+@keyframes capGlow{50%{box-shadow:0 0 0 3px var(--gold-d),0 0 22px 8px rgba(228,201,162,1)}}
+@media (prefers-reduced-motion:reduce){.ring::before,.ring b,.ring .cap::after{animation:none!important}}
 </style>
 </head>
 <body>
@@ -419,10 +473,10 @@ body.st-on .toast{bottom:92px}
 <div class="wrap">
 <div class="sec-h"><span class="eyebrow">Para quem é</span><h2>Manchas que não saem com nada?</h2><p>O creme age nas principais causas da pele irregular.</p></div>
 <div class="problem-grid">
-<div class="pcard"><span class="n">01</span><h3>Melasma</h3><p>Manchas escuras causadas por hormônios e exposição ao sol.</p></div>
-<div class="pcard"><span class="n">02</span><h3>Marcas de acne</h3><p>Pontos escuros que ficam depois das espinhas.</p></div>
-<div class="pcard"><span class="n">03</span><h3>Manchas de sol</h3><p>Sardas e manchas acumuladas ao longo dos anos.</p></div>
-<div class="pcard"><span class="n">04</span><h3>Pele opaca</h3><p>Tom irregular e pele sem viço, cansada.</p></div>
+<div class="pcard"><span class="sw sw-mel" aria-hidden="true"></span><div class="pc-t"><span class="n">01</span><h3>Melasma</h3><p>Manchas escuras causadas por hormônios e exposição ao sol.</p></div></div>
+<div class="pcard"><span class="sw sw-acne" aria-hidden="true"></span><div class="pc-t"><span class="n">02</span><h3>Marcas de acne</h3><p>Pontos escuros que ficam depois das espinhas.</p></div></div>
+<div class="pcard"><span class="sw sw-sol" aria-hidden="true"></span><div class="pc-t"><span class="n">03</span><h3>Manchas de sol</h3><p>Sardas e manchas acumuladas ao longo dos anos.</p></div></div>
+<div class="pcard"><span class="sw sw-opa" aria-hidden="true"></span><div class="pc-t"><span class="n">04</span><h3>Pele opaca</h3><p>Tom irregular e pele sem viço, cansada.</p></div></div>
 </div>
 </div>
 </section>
@@ -472,9 +526,9 @@ body.st-on .toast{bottom:92px}
 <div class="wrap">
 <div class="sec-h"><span class="eyebrow">Resultados</span><h2>Resultados visíveis em semanas</h2><p>Teste de percepção com usuárias após 4 semanas de uso.</p></div>
 <div class="results">
-<div class="res"><b data-to="94">0%</b><p>perceberam a pele mais uniforme</p></div>
-<div class="res"><b data-to="89">0%</b><p>notaram manchas mais claras</p></div>
-<div class="res"><b data-to="97">0%</b><p>sentiram a pele mais hidratada</p></div>
+<div class="res"><div class="ring" style="--v:0"><svg viewBox="0 0 80 80" aria-hidden="true"><defs><linearGradient id="ringG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C9A676"></stop><stop offset="1" stop-color="#7A5359"></stop></linearGradient></defs><circle class="tr" cx="40" cy="40" r="34"></circle><circle class="pg" cx="40" cy="40" r="34" pathLength="100"></circle></svg><i class="cap" aria-hidden="true"></i><b data-to="94">0%</b></div><p>perceberam a pele mais uniforme</p></div>
+<div class="res"><div class="ring" style="--v:0"><svg viewBox="0 0 80 80" aria-hidden="true"><circle class="tr" cx="40" cy="40" r="34"></circle><circle class="pg" cx="40" cy="40" r="34" pathLength="100"></circle></svg><i class="cap" aria-hidden="true"></i><b data-to="89">0%</b></div><p>notaram manchas mais claras</p></div>
+<div class="res"><div class="ring" style="--v:0"><svg viewBox="0 0 80 80" aria-hidden="true"><circle class="tr" cx="40" cy="40" r="34"></circle><circle class="pg" cx="40" cy="40" r="34" pathLength="100"></circle></svg><i class="cap" aria-hidden="true"></i><b data-to="97">0%</b></div><p>sentiram a pele mais hidratada</p></div>
 </div>
 <div class="ba">
 <div class="bacard"><div class="baslide" style="--p:50%"><div class="l a"><img class="slot" id="ba1-antes" src="assets/img/ba1-antes.jpg" alt="Pele antes do uso" loading="lazy" decoding="async"></div><div class="l d"><img class="slot" id="ba1-depois" src="assets/img/ba1-depois.jpg" alt="Pele depois do uso" loading="lazy" decoding="async"></div><label class="la">Antes</label><label class="ld">Depois</label><div class="hdl"><span>‹ ›</span></div></div><p><b>Juliana, 34</b> · melasma · 6 semanas <em>Arraste para comparar</em></p></div>
@@ -592,7 +646,7 @@ groups.forEach(s=>document.querySelectorAll(s).forEach((el,i)=>{el.classList.add
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.rvl').forEach(el=>io.observe(el));
 // counters
-const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cio.unobserve(e.target);const el=e.target,to=+el.dataset.to,t0=performance.now();const f=t=>{const k=Math.min(1,(t-t0)/1400),v=Math.round(to*(1-Math.pow(1-k,3)));el.textContent=v+'%';if(k<1)requestAnimationFrame(f)};RM?el.textContent=to+'%':requestAnimationFrame(f)}),{threshold:.6});
+const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cio.unobserve(e.target);const el=e.target,to=+el.dataset.to,ring=el.parentNode,idx=[...document.querySelectorAll('.res b[data-to]')].indexOf(el),t0=performance.now()+idx*260;ring.classList.add('go');const f=t=>{const k=Math.max(0,Math.min(1,(t-t0)/1600)),v=Math.round(to*(1-Math.pow(1-k,3)));el.innerHTML=v+'<small>%</small>';ring.style.setProperty('--v',v);if(k<1)requestAnimationFrame(f);else ring.classList.add('done')};RM?(el.innerHTML=to+'<small>%</small>',ring.style.setProperty('--v',to),ring.classList.add('go','done')):requestAnimationFrame(f)}),{threshold:.6});
 document.querySelectorAll('.res b[data-to]').forEach(el=>cio.observe(el));
 // steps highlight
 const sio=new IntersectionObserver(es=>es.forEach(e=>e.target.classList.toggle('lit',e.isIntersecting)),{rootMargin:'-45% 0px -45% 0px'});document.querySelectorAll('.step').forEach(s=>sio.observe(s));
