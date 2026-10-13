@@ -395,7 +395,7 @@ body.st-on .toast{bottom:92px}
 .ring svg{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg)}
 .ring circle{fill:none;stroke-width:5.5;stroke-linecap:round}
 .ring .tr{stroke:var(--blush-2)}
-.ring .pg{stroke:url(#ringG);stroke-dasharray:calc(var(--v)*1) 100}
+.ring .pg{opacity:min(var(--v),1);stroke:url(#ringG);stroke-dasharray:calc(var(--v)*1) 100}
 .res .ring b{font-size:44px;letter-spacing:-.02em;display:flex;align-items:flex-start}.res .ring b small{font-size:.42em;margin:.18em 0 0 .06em;font-weight:500;color:var(--rose)}
 .res p{font-size:16px;font-weight:600;color:var(--ink);max-width:22ch;line-height:1.35}
 @media (max-width:640px){
@@ -408,17 +408,12 @@ body.st-on .toast{bottom:92px}
 }
 
 /* resultados: animação dos anéis */
-.ring .cap{position:absolute;inset:0;transform:rotate(calc(var(--v)*3.6deg));opacity:0;transition:opacity .3s;pointer-events:none}
-.ring.go .cap{opacity:1}
-.ring .cap::after{content:"";position:absolute;left:50%;top:calc(50% - 34/80*100%);width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:#fff;box-shadow:0 0 0 3px var(--gold-d),0 0 14px 4px rgba(228,201,162,.9)}
 .ring::before{content:"";position:absolute;inset:6%;border-radius:50%;pointer-events:none;opacity:0}
 .ring.done::before{animation:ringHalo 2.8s ease-out .2s infinite}
-@keyframes ringHalo{0%{box-shadow:0 0 0 0 rgba(201,166,118,.45);opacity:1}100%{box-shadow:0 0 0 18px rgba(201,166,118,0);opacity:1}}
+@keyframes ringHalo{0%{box-shadow:0 0 0 0 rgba(122,83,89,.28);opacity:1}100%{box-shadow:0 0 0 18px rgba(122,83,89,0);opacity:1}}
 .ring.done b{animation:ringPop .5s cubic-bezier(.3,1.6,.5,1)}
 @keyframes ringPop{40%{transform:scale(1.08)}}
-.ring.done .cap::after{animation:capGlow 2.8s ease-in-out infinite}
-@keyframes capGlow{50%{box-shadow:0 0 0 3px var(--gold-d),0 0 22px 8px rgba(228,201,162,1)}}
-@media (prefers-reduced-motion:reduce){.ring::before,.ring b,.ring .cap::after{animation:none!important}}
+@media (prefers-reduced-motion:reduce){.ring::before,.ring b{animation:none!important}}
 </style>
 </head>
 <body>
@@ -526,9 +521,9 @@ body.st-on .toast{bottom:92px}
 <div class="wrap">
 <div class="sec-h"><span class="eyebrow">Resultados</span><h2>Resultados visíveis em semanas</h2><p>Teste de percepção com usuárias após 4 semanas de uso.</p></div>
 <div class="results">
-<div class="res"><div class="ring" style="--v:0"><svg viewBox="0 0 80 80" aria-hidden="true"><defs><linearGradient id="ringG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C9A676"></stop><stop offset="1" stop-color="#7A5359"></stop></linearGradient></defs><circle class="tr" cx="40" cy="40" r="34"></circle><circle class="pg" cx="40" cy="40" r="34" pathLength="100"></circle></svg><i class="cap" aria-hidden="true"></i><b data-to="94">0%</b></div><p>perceberam a pele mais uniforme</p></div>
-<div class="res"><div class="ring" style="--v:0"><svg viewBox="0 0 80 80" aria-hidden="true"><circle class="tr" cx="40" cy="40" r="34"></circle><circle class="pg" cx="40" cy="40" r="34" pathLength="100"></circle></svg><i class="cap" aria-hidden="true"></i><b data-to="89">0%</b></div><p>notaram manchas mais claras</p></div>
-<div class="res"><div class="ring" style="--v:0"><svg viewBox="0 0 80 80" aria-hidden="true"><circle class="tr" cx="40" cy="40" r="34"></circle><circle class="pg" cx="40" cy="40" r="34" pathLength="100"></circle></svg><i class="cap" aria-hidden="true"></i><b data-to="97">0%</b></div><p>sentiram a pele mais hidratada</p></div>
+<div class="res"><div class="ring" style="--v:0"><svg viewBox="0 0 80 80" aria-hidden="true"><defs><linearGradient id="ringG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A5707D"></stop><stop offset="1" stop-color="#5C3D43"></stop></linearGradient></defs><circle class="tr" cx="40" cy="40" r="34"></circle><circle class="pg" cx="40" cy="40" r="34" pathLength="100"></circle></svg><b data-to="94">0%</b></div><p>perceberam a pele mais uniforme</p></div>
+<div class="res"><div class="ring" style="--v:0"><svg viewBox="0 0 80 80" aria-hidden="true"><circle class="tr" cx="40" cy="40" r="34"></circle><circle class="pg" cx="40" cy="40" r="34" pathLength="100"></circle></svg><b data-to="89">0%</b></div><p>notaram manchas mais claras</p></div>
+<div class="res"><div class="ring" style="--v:0"><svg viewBox="0 0 80 80" aria-hidden="true"><circle class="tr" cx="40" cy="40" r="34"></circle><circle class="pg" cx="40" cy="40" r="34" pathLength="100"></circle></svg><b data-to="97">0%</b></div><p>sentiram a pele mais hidratada</p></div>
 </div>
 <div class="ba">
 <div class="bacard"><div class="baslide" style="--p:50%"><div class="l a"><img class="slot" id="ba1-antes" src="assets/img/ba1-antes.jpg" alt="Pele antes do uso" loading="lazy" decoding="async"></div><div class="l d"><img class="slot" id="ba1-depois" src="assets/img/ba1-depois.jpg" alt="Pele depois do uso" loading="lazy" decoding="async"></div><label class="la">Antes</label><label class="ld">Depois</label><div class="hdl"><span>‹ ›</span></div></div><p><b>Juliana, 34</b> · melasma · 6 semanas <em>Arraste para comparar</em></p></div>
